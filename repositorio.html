@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositorio Institucional - AGROIDEAS</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1A5336',
+              secondary: '#53A548',
+              accent: '#F1C40F',
+              bglight: '#F4F6F5',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Montserrat', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+    <!-- Repositorio Custom Styles -->
+    <link rel="stylesheet" href="css/repositorio.css">
+    <link rel="stylesheet" href="css/modern-styles.css">
+
+</head>
+<body class="bg-slate-50" data-page-id="repositorio">
+
+    <header></header>
+
+    <main class="pt-32 transition-opacity duration-700">
+        <!-- Encabezado de Sección -->
+        <section class="header-section text-center py-20 px-4">
+            <div class="max-w-7xl mx-auto">
+                <!-- Breadcrumbs -->
+                <nav class="flex items-center justify-center space-x-2 text-blue-200/50 text-xs mb-8 uppercase tracking-[0.2em] font-bold">
+                    <a href="index.html" class="hover:text-white transition-colors">Inicio</a>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-secondary"></i>
+                    <span class="text-white">Repositorio Institucional</span>
+                </nav>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 flex justify-center items-center gap-3">
+                    <i data-lucide="folder-kanban" class="w-10 h-10"></i> Repositorio Institucional
+                </h1>
+                <p class="text-xl text-blue-100/80 font-medium">Activos de Conocimiento, Innovación y Gestión Documental</p>
+            </div>
+        </section>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        
+        
+        <!-- Navegación por Pestañas -->
+        <div class="bg-white p-2 rounded-2xl shadow-sm mb-8 flex flex-wrap justify-center gap-2" data-aos="fade-up">
+            <button class="tab-link active min-w-[150px] p-4 rounded-xl font-bold flex flex-col items-center gap-2 transition-all shadow-sm border border-transparent" data-target="normatividad">
+                <i data-lucide="landmark" class="w-6 h-6"></i>
+                <span class="text-sm">1. Normatividad y Directivas</span>
+            </button>
+            <button class="tab-link min-w-[150px] p-4 rounded-xl font-bold flex flex-col items-center gap-2 transition-all text-slate-600 shadow-sm border border-transparent" data-target="conocimiento">
+                <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+                <span class="text-sm">2. Gestión del Conocimiento</span>
+            </button>
+            <button class="tab-link min-w-[150px] p-4 rounded-xl font-bold flex flex-col items-center gap-2 transition-all text-slate-600 shadow-sm border border-transparent" data-target="innovacion">
+                <i data-lucide="lightbulb" class="w-6 h-6"></i>
+                <span class="text-sm">3. Innovación Pública</span>
+            </button>
+            <button class="tab-link min-w-[150px] p-4 rounded-xl font-bold flex flex-col items-center gap-2 transition-all text-slate-600 shadow-sm border border-transparent" data-target="publicaciones">
+                <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                <span class="text-sm">4. Publicaciones y Procesos</span>
+            </button>
+        </div>
+        
+        <!-- Botón Global para Solicitar Registro a UPP -->
+        <div class="mb-12 text-center" data-aos="fade-up">
+            <a href="#" class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-full font-bold shadow-lg shadow-blue-600/30 hover:bg-blue-700 hover:scale-105 hover:shadow-blue-600/50 transition-all group">
+                <i data-lucide="plus-circle" class="w-6 h-6 group-hover:rotate-90 transition-transform"></i>
+                <span>Solicitar Registro a UPP de Nuevos Documentos o Conocimiento</span>
+            </a>
+        </div>
+
+        <!-- Contenedor de Contenido -->
+        <div id="tab-content-container">
+            
+            <!-- ==========================================
+                 TAB 1: NORMATIVIDAD Y DIRECTIVAS
+            =========================================== -->
+            <div id="normatividad" class="tab-pane block space-y-8">
+                <p class="text-sm text-slate-500 mb-4 flex items-center gap-2">
+                    <i data-lucide="info" class="w-4 h-4 text-indigo-500"></i>
+                    Haz clic en cada título de sección para desplegar u ocultar su contenido.
+                </p>
+                <div class="divide-y divide-slate-100 bg-white rounded-[2rem] shadow-sm overflow-hidden border border-slate-100" id="accordion-normatividad">
+                    <!-- 1.1 Lineamientos -->
+                    <div class="accordion-item active">
+                        <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="file-check" class="text-primary"></i> 1.1 Lineamientos para la formulación de Directivas</span>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform rotate-180 chevron-icon"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 bg-blue-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                Espacio dedicado a estandarizar la creación de nuestros instrumentos normativos internos. Aquí encontrarás el flujograma oficial y la "norma madre" que rige cómo elaborar, revisar y aprobar directivas en la entidad, garantizando consistencia y calidad regulatoria.
+                            </div>
+                            <div class="p-6 grid md:grid-cols-2 gap-6 bg-slate-50/50 border-t border-slate-100">
+                                <a href="https://www.gob.pe/institucion/midagri/normas-legales/2997613-0187-2022-midagri" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="file-text" class="w-6 h-6"></i></div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-800 group-hover:text-red-600 transition-colors">La Directiva para hacer directivas</h4>
+                                            <p class="text-sm text-slate-500 mt-1">Guía oficial paso a paso y flujograma del proceso.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://docs.google.com/document/d/1pa5k9msLz7EBY1PYr1y78jd8sxG18nu_/edit?usp=sharing&ouid=117490016204520558433&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-12 h-12 bg-blue-50 text-primary rounded-xl flex items-center justify-center shrink-0"><i data-lucide="layout-template" class="w-6 h-6"></i></div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-800 group-hover:text-primary transition-colors">Formatos y Plantillas (Word)</h4>
+                                            <p class="text-sm text-slate-500 mt-1">Descarga las plantillas estandarizadas para redactar normativas.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 1.2 Listado de Directivas -->
+                    <div class="accordion-item">
+                        <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="list" class="text-primary"></i> 1.2 Buscador y Listado Oficial de Directivas</span>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform chevron-icon"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 bg-blue-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                Repositorio centralizado que alberga todas las directivas y normas internas vigentes de la entidad. Utiliza este catálogo para consultar los marcos normativos que regulan nuestras funciones, procesos operativos y administrativos.
+                            </div>
+                            <div class="p-0 border-t border-slate-50 overflow-x-auto divide-y divide-slate-100" id="lista-oficial-directivas">
+                                <!-- El contenido dinámico de las directivas (json) se cargará aquí -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 2: GESTIÓN DEL CONOCIMIENTO
+            =========================================== -->
+            <div id="conocimiento" class="tab-pane hidden space-y-8">
+                <p class="text-sm text-slate-500 mb-4 flex items-center gap-2">
+                    <i data-lucide="info" class="w-4 h-4 text-indigo-500"></i>
+                    Haz clic en cada título de sección para desplegar u ocultar su contenido.
+                </p>
+                <div class="divide-y divide-slate-100 bg-white rounded-[2rem] shadow-sm overflow-hidden border border-slate-100" id="accordion-conocimiento">
+                    <!-- 2.1 Fichas de Lecciones Aprendidas -->
+                    <div class="accordion-item active">
+                        <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="book-open-check" class="text-secondary"></i> 2.1 Fichas de Lecciones Aprendidas (Aprobadas por ETMC)</span>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform rotate-180 chevron-icon"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 bg-emerald-50/60 text-slate-700 text-sm border-t border-slate-100 flex items-start gap-3">
+                                <i data-lucide="shield-check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+                                <div>
+                                    <span class="font-bold text-primary block mb-0.5">Activo de Mitigación de Riesgos validado por el ETMC</span>
+                                    Documentos ágiles que capturan el análisis reflexivo de experiencias, aciertos o errores operativos derivados de las intervenciones en campo para mitigar riesgos futuros en la formulación, supervisión y liquidación de planes.
+                                </div>
+                            </div>
+                            <div class="p-6 border-t border-slate-100 overflow-x-auto bg-white">
+                                <table class="w-full text-left border-collapse min-w-[750px]">
+                                    <thead>
+                                        <tr class="bg-slate-50 text-slate-500 text-[11px] font-black uppercase tracking-wider border-b border-slate-200">
+                                            <th class="py-3.5 px-4 rounded-tl-xl w-16 text-center">Nº</th>
+                                            <th class="py-3.5 px-4 w-64">Denominación [Ficha]</th>
+                                            <th class="py-3.5 px-4">Descripción</th>
+                                            <th class="py-3.5 px-4 w-36 text-center">Fecha Publicación</th>
+                                            <th class="py-3.5 px-4 rounded-tr-xl w-32 text-center">Link (acceso)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100 text-sm font-normal text-slate-600">
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="py-4 px-4 text-center font-bold text-slate-800">LA-001</td>
+                                            <td class="py-4 px-4 font-semibold text-slate-900">[Ficha LA-2025-01] Gestión anticipada de cotizaciones en maquinaria agrícola de importación</td>
+                                            <td class="py-4 px-4 text-xs leading-relaxed text-slate-500">Retrasos en ejecución por vencimiento de proformas y demoras aduaneras de tractores en San Martín y Junín. Se establece margen de amortiguación cambiaria y actualización a 60 días.</td>
+                                            <td class="py-4 px-4 text-center text-xs font-medium text-slate-500">14/01/2025</td>
+                                            <td class="py-4 px-4 text-center">
+                                                <a href="#" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-secondary/10 text-primary font-bold text-xs hover:bg-primary hover:text-white transition-all shadow-sm">
+                                                    <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Ver Ficha
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="py-4 px-4 text-center font-bold text-slate-800">LA-002</td>
+                                            <td class="py-4 px-4 font-semibold text-slate-900">[Ficha LA-2025-02] Prevención de observaciones en acreditación de titularidad de predios</td>
+                                            <td class="py-4 px-4 text-xs leading-relaxed text-slate-500">Paralizaciones en expedientes de café y cacao por superposición de títulos en áreas rurales. Define listas de cotejo cruzado obligatorio con SUNARP y COFOPRI en fase previa.</td>
+                                            <td class="py-4 px-4 text-center text-xs font-medium text-slate-500">28/02/2025</td>
+                                            <td class="py-4 px-4 text-center">
+                                                <a href="#" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-secondary/10 text-primary font-bold text-xs hover:bg-primary hover:text-white transition-all shadow-sm">
+                                                    <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Ver Ficha
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="py-4 px-4 text-center font-bold text-slate-800">LA-003</td>
+                                            <td class="py-4 px-4 font-semibold text-slate-900">[Ficha LA-2025-03] Manejo de contingencias comunitarias en inspecciones de campo</td>
+                                            <td class="py-4 px-4 text-xs leading-relaxed text-slate-500">Estrategia correctiva ante rechazo social en supervisiones no notificadas a la junta directiva comunal. Establece protocolo de comunicación bilingüe y actas pre-visita.</td>
+                                            <td class="py-4 px-4 text-center text-xs font-medium text-slate-500">15/04/2025</td>
+                                            <td class="py-4 px-4 text-center">
+                                                <a href="#" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-secondary/10 text-primary font-bold text-xs hover:bg-primary hover:text-white transition-all shadow-sm">
+                                                    <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Ver Ficha
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="py-4 px-4 text-center font-bold text-slate-800">LA-004</td>
+                                            <td class="py-4 px-4 font-semibold text-slate-900">[Ficha LA-2025-04] Alertas ante variación de especificaciones en riego por goteo</td>
+                                            <td class="py-4 px-4 text-xs leading-relaxed text-slate-500">Impacto del cambio de proveedores no autorizados por la OA que derivaron en multas de liquidación. Obliga al sellado de especificaciones en el acta de inicio.</td>
+                                            <td class="py-4 px-4 text-center text-xs font-medium text-slate-500">10/06/2025</td>
+                                            <td class="py-4 px-4 text-center">
+                                                <a href="#" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-secondary/10 text-primary font-bold text-xs hover:bg-primary hover:text-white transition-all shadow-sm">
+                                                    <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Ver Ficha
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2.2 Fichas de Buenas Prácticas -->
+                    <div class="accordion-item">
+                        <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="thumbs-up" class="text-accent"></i> 2.2 Fichas de Buenas Prácticas (Estandarización Nacional)</span>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform chevron-icon"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 bg-amber-50/60 text-slate-700 text-sm border-t border-slate-100 flex items-start gap-3">
+                                <i data-lucide="award" class="w-5 h-5 text-accent shrink-0 mt-0.5"></i>
+                                <div>
+                                    <span class="font-bold text-slate-900 block mb-0.5">Sistematización de Métodos y Soluciones Exitosas</span>
+                                    Soluciones ingeniosas y métodos optimizados que han demostrado resultados superiores en las Unidades Regionales, validados por el ETMC para ser replicados y estandarizados a nivel nacional.
+                                </div>
+                            </div>
+                            <div class="p-6 border-t border-slate-100 overflow-x-auto bg-white">
+                                <table class="w-full text-left border-collapse min-w-[750px]">
+                                    <thead>
+                                        <tr class="bg-slate-50 text-slate-500 text-[11px] font-black uppercase tracking-wider border-b border-slate-200">
+                                            <th class="py-3.5 px-4 rounded-tl-xl w-16 text-center">Nº</th>
+                                            <th class="py-3.5 px-4 w-64">Denominación [Ficha]</th>
+                                            <th class="py-3.5 px-4">Descripción</th>
+                                            <th class="py-3.5 px-4 w-36 text-center">Fecha Publicación</th>
+                                            <th class="py-3.5 px-4 rounded-tr-xl w-32 text-center">Link (acceso)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100 text-sm font-normal text-slate-600">
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="py-4 px-4 text-center font-bold text-slate-800">BP-001</td>
+                                            <td class="py-4 px-4 font-semibold text-slate-900">[Ficha BP-2025-01] Pre-evaluación express mediante mesa de ayuda regional virtual</td>
+                                            <td class="py-4 px-4 text-xs leading-relaxed text-slate-500">Metodología en UR Arequipa que redujo en 42% la desaprobación de expedientes iniciales mediante sesiones Zoom de chequeo documental previo al ingreso formal.</td>
+                                            <td class="py-4 px-4 text-center text-xs font-medium text-slate-500">20/01/2025</td>
+                                            <td class="py-4 px-4 text-center">
+                                                <a href="#" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-accent/10 text-slate-800 font-bold text-xs hover:bg-accent hover:text-white transition-all shadow-sm">
+                                                    <i data-lucide="file-check" class="w-3.5 h-3.5"></i> Ver Ficha
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="py-4 px-4 text-center font-bold text-slate-800">BP-002</td>
+                                            <td class="py-4 px-4 font-semibold text-slate-900">[Ficha BP-2025-02] Monitoreo georreferenciado offline en zonas de nula conectividad</td>
+                                            <td class="py-4 px-4 text-xs leading-relaxed text-slate-500">Uso de herramientas SIG móviles sincronizables para toma de coordenadas y fotografías en parcelas alejadas del VRAEM, eliminando re-visitas por pérdida de datos GPS.</td>
+                                            <td class="py-4 px-4 text-center text-xs font-medium text-slate-500">12/03/2025</td>
+                                            <td class="py-4 px-4 text-center">
+                                                <a href="#" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-accent/10 text-slate-800 font-bold text-xs hover:bg-accent hover:text-white transition-all shadow-sm">
+                                                    <i data-lucide="file-check" class="w-3.5 h-3.5"></i> Ver Ficha
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="py-4 px-4 text-center font-bold text-slate-800">BP-003</td>
+                                            <td class="py-4 px-4 font-semibold text-slate-900">[Ficha BP-2025-03] Taller lúdico infográfico para rendición de cuentas de las OA</td>
+                                            <td class="py-4 px-4 text-xs leading-relaxed text-slate-500">Estrategia pedagógica visual que simplifica la comprensión del cuadro de adquisiciones y cofinanciamiento para directivos comunales, acelerando los desembolsos.</td>
+                                            <td class="py-4 px-4 text-center text-xs font-medium text-slate-500">05/05/2025</td>
+                                            <td class="py-4 px-4 text-center">
+                                                <a href="#" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-accent/10 text-slate-800 font-bold text-xs hover:bg-accent hover:text-white transition-all shadow-sm">
+                                                    <i data-lucide="file-check" class="w-3.5 h-3.5"></i> Ver Ficha
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="py-4 px-4 text-center font-bold text-slate-800">BP-004</td>
+                                            <td class="py-4 px-4 font-semibold text-slate-900">[Ficha BP-2025-04] Sistema de semaforización para control de compras de bienes</td>
+                                            <td class="py-4 px-4 text-xs leading-relaxed text-slate-500">Plantilla estandarizada que alerta 30, 15 y 5 días antes sobre hitos críticos de compras en los Planes de Negocio, reduciendo solicitudes de ampliación de plazo.</td>
+                                            <td class="py-4 px-4 text-center text-xs font-medium text-slate-500">18/06/2025</td>
+                                            <td class="py-4 px-4 text-center">
+                                                <a href="#" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-accent/10 text-slate-800 font-bold text-xs hover:bg-accent hover:text-white transition-all shadow-sm">
+                                                    <i data-lucide="file-check" class="w-3.5 h-3.5"></i> Ver Ficha
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2.3 Guías Técnicas de "Saber Hacer" -->
+                    <div class="accordion-item">
+                        <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="graduation-cap" class="text-primary"></i> 2.3 Guías Técnicas de "Saber Hacer" (El Activo Maestro 5W+2H)</span>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform chevron-icon"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 bg-blue-50/60 text-slate-700 text-sm border-t border-slate-100 flex items-start gap-3">
+                                <i data-lucide="sparkles" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+                                <div>
+                                    <span class="font-bold text-primary block mb-0.5">Instructivos Robustos con el "Toque del Experto"</span>
+                                    Documentos instruccionales detallados bajo la metodología 5W+2H (What, Why, Who, Where, When, How, How much). Incluyen alertas de riesgo rojas, manejo de imprevistos y tips de los especialistas de mayor trayectoria en la entidad.
+                                </div>
+                            </div>
+                            <div class="p-6 border-t border-slate-100 overflow-x-auto bg-white">
+                                <table class="w-full text-left border-collapse min-w-[750px]">
+                                    <thead>
+                                        <tr class="bg-slate-50 text-slate-500 text-[11px] font-black uppercase tracking-wider border-b border-slate-200">
+                                            <th class="py-3.5 px-4 rounded-tl-xl w-16 text-center">Nº</th>
+                                            <th class="py-3.5 px-4 w-64">Denominación [Ficha]</th>
+                                            <th class="py-3.5 px-4">Descripción</th>
+                                            <th class="py-3.5 px-4 w-36 text-center">Fecha Publicación</th>
+                                            <th class="py-3.5 px-4 rounded-tr-xl w-32 text-center">Link (acceso)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100 text-sm font-normal text-slate-600">
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="py-4 px-4 text-center font-bold text-slate-800">GT-001</td>
+                                            <td class="py-4 px-4 font-semibold text-slate-900">[Guía GT-SH-2025-01] Evaluación económica y financiera de Planes de Negocio Agroindustriales (5W+2H)</td>
+                                            <td class="py-4 px-4 text-xs leading-relaxed text-slate-500">Instructivo exhaustivo de VAN, TIR y flujo de caja en planes cárnicos y lácteos. <span class="text-primary font-semibold">Toque del Experto:</span> Alertas para detectar sobreestimación de rendimientos por hectárea e inflación de costos de mano de obra.</td>
+                                            <td class="py-4 px-4 text-center text-xs font-medium text-slate-500">08/01/2025</td>
+                                            <td class="py-4 px-4 text-center">
+                                                <a href="#" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-white font-bold text-xs hover:bg-secondary transition-all shadow-sm">
+                                                    <i data-lucide="book-open" class="w-3.5 h-3.5"></i> Ver Guía
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="py-4 px-4 text-center font-bold text-slate-800">GT-002</td>
+                                            <td class="py-4 px-4 font-semibold text-slate-900">[Guía GT-SH-2025-02] Inspección en campo para verificación de bienes entregados y operatividad de plantas</td>
+                                            <td class="py-4 px-4 text-xs leading-relaxed text-slate-500">Procedimiento 5W+2H de inspección in-situ. <span class="text-primary font-semibold">Toque del Experto:</span> Técnicas para identificar números de serie adulterados, motores re-acondicionados hechos pasar por nuevos y pruebas en tanques de enfriamiento.</td>
+                                            <td class="py-4 px-4 text-center text-xs font-medium text-slate-500">19/02/2025</td>
+                                            <td class="py-4 px-4 text-center">
+                                                <a href="#" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-white font-bold text-xs hover:bg-secondary transition-all shadow-sm">
+                                                    <i data-lucide="book-open" class="w-3.5 h-3.5"></i> Ver Guía
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="py-4 px-4 text-center font-bold text-slate-800">GT-003</td>
+                                            <td class="py-4 px-4 font-semibold text-slate-900">[Guía GT-SH-2025-03] Formulación de especificaciones técnicas para empacadoras e industrias procesadoras</td>
+                                            <td class="py-4 px-4 text-xs leading-relaxed text-slate-500">Instructivo para evitar direccionamiento o vacíos en compras. <span class="text-primary font-semibold">Toque del Experto:</span> Parámetros críticos de acero inoxidable grado alimenticio (304 vs 316), voltaje y normativas sanitarias DIGESA/SENASA.</td>
+                                            <td class="py-4 px-4 text-center text-xs font-medium text-slate-500">22/04/2025</td>
+                                            <td class="py-4 px-4 text-center">
+                                                <a href="#" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-white font-bold text-xs hover:bg-secondary transition-all shadow-sm">
+                                                    <i data-lucide="book-open" class="w-3.5 h-3.5"></i> Ver Guía
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="py-4 px-4 text-center font-bold text-slate-800">GT-004</td>
+                                            <td class="py-4 px-4 font-semibold text-slate-900">[Guía GT-SH-2025-04] Protocolo integral para la liquidación final y cierre de incentivos económicos</td>
+                                            <td class="py-4 px-4 text-xs leading-relaxed text-slate-500">Guía maestra de auditoría técnica y financiera de cierre. <span class="text-primary font-semibold">Toque del Experto:</span> Tips de conciliación de saldos bancarios en cooperativas comunales y resolución ágil de saldos no devengados o reintegros.</td>
+                                            <td class="py-4 px-4 text-center text-xs font-medium text-slate-500">02/06/2025</td>
+                                            <td class="py-4 px-4 text-center">
+                                                <a href="#" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-white font-bold text-xs hover:bg-secondary transition-all shadow-sm">
+                                                    <i data-lucide="book-open" class="w-3.5 h-3.5"></i> Ver Guía
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2.4 Actas de Entrega de Conocimiento y Lecciones Aprendidas -->
+                    <div class="accordion-item">
+                        <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="folder-key" class="text-amber-600"></i> 2.4 Actas de Entrega de Conocimiento y Lecciones Aprendidas (Offboarding)</span>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform chevron-icon"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 bg-slate-100/80 text-slate-700 text-sm border-t border-slate-200 flex items-start gap-3">
+                                <i data-lucide="user-check" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <span class="font-bold text-slate-900 block mb-0.5">Blindaje contra la Fuga de Capital Intelectual (Offboarding Institucional)</span>
+                                    Formatos obligatorios completados durante el cese o rotación de personal. Documentan expedientes críticos en trámite, casuística no escrita y redes de contacto clave para evitar vacíos operativos en el empalme de nuevos especialistas.
+                                </div>
+                            </div>
+                            <div class="p-6 border-t border-slate-100 overflow-x-auto bg-white">
+                                <table class="w-full text-left border-collapse min-w-[750px]">
+                                    <thead>
+                                        <tr class="bg-slate-50 text-slate-500 text-[11px] font-black uppercase tracking-wider border-b border-slate-200">
+                                            <th class="py-3.5 px-4 rounded-tl-xl w-16 text-center">Nº</th>
+                                            <th class="py-3.5 px-4 w-64">Denominación [Ficha]</th>
+                                            <th class="py-3.5 px-4">Descripción</th>
+                                            <th class="py-3.5 px-4 w-36 text-center">Fecha Publicación</th>
+                                            <th class="py-3.5 px-4 rounded-tr-xl w-32 text-center">Link (acceso)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100 text-sm font-normal text-slate-600">
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="py-4 px-4 text-center font-bold text-slate-800">EC-001</td>
+                                            <td class="py-4 px-4 font-semibold text-slate-900">[Acta EC-2025-01] Transferencia de Cartera y Casuística - Especialista Regional en Negocios Agrarios (UR Puno)</td>
+                                            <td class="py-4 px-4 text-xs leading-relaxed text-slate-500">Expediente de empalme ante rotación. Detalla casuística en 14 Planes de Negocio de quinua y alpaca en ejecución, historial de acuerdos comunales y puntos de dolor aduaneros en frontera.</td>
+                                            <td class="py-4 px-4 text-center text-xs font-medium text-slate-500">31/01/2025</td>
+                                            <td class="py-4 px-4 text-center">
+                                                <a href="#" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-amber-50 text-amber-700 font-bold text-xs hover:bg-amber-600 hover:text-white transition-all shadow-sm">
+                                                    <i data-lucide="lock" class="w-3.5 h-3.5"></i> Ver Acta
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="py-4 px-4 text-center font-bold text-slate-800">EC-002</td>
+                                            <td class="py-4 px-4 font-semibold text-slate-900">[Acta EC-2025-02] Entrega de Conocimiento - Coordinador de Evaluación de Incentivos de Reconversión Productiva</td>
+                                            <td class="py-4 px-4 text-xs leading-relaxed text-slate-500">Documento de cese que sistematiza criterios técnicos validados en evaluación de expedientes de palma aceitera y banano orgánico, incluyendo matriz de contactos territoriales.</td>
+                                            <td class="py-4 px-4 text-center text-xs font-medium text-slate-500">28/02/2025</td>
+                                            <td class="py-4 px-4 text-center">
+                                                <a href="#" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-amber-50 text-amber-700 font-bold text-xs hover:bg-amber-600 hover:text-white transition-all shadow-sm">
+                                                    <i data-lucide="lock" class="w-3.5 h-3.5"></i> Ver Acta
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="py-4 px-4 text-center font-bold text-slate-800">EC-003</td>
+                                            <td class="py-4 px-4 font-semibold text-slate-900">[Acta EC-2025-03] Empalme Operativo y Lecciones del Proyecto de Modernización SI-AGROIDEAS</td>
+                                            <td class="py-4 px-4 text-xs leading-relaxed text-slate-500">Acta del líder de proyecto saliente. Transfiere arquitectura del sistema informático, repositorios, credenciales de staging, deudas técnicas identificadas y relación con proveedores cloud.</td>
+                                            <td class="py-4 px-4 text-center text-xs font-medium text-slate-500">30/04/2025</td>
+                                            <td class="py-4 px-4 text-center">
+                                                <a href="#" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-amber-50 text-amber-700 font-bold text-xs hover:bg-amber-600 hover:text-white transition-all shadow-sm">
+                                                    <i data-lucide="lock" class="w-3.5 h-3.5"></i> Ver Acta
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="py-4 px-4 text-center font-bold text-slate-800">EC-004</td>
+                                            <td class="py-4 px-4 font-semibold text-slate-900">[Acta EC-2025-04] Transferencia de Expedientes en Fase de Liquidación Legal - Especialista Legal UP</td>
+                                            <td class="py-4 px-4 text-xs leading-relaxed text-slate-500">Detalle de 8 expedientes con proceso arbitral o recupero en curso, incluyendo estrategias legales, plazos judiciales perentorios y alertas sobre peritajes contables pendientes.</td>
+                                            <td class="py-4 px-4 text-center text-xs font-medium text-slate-500">31/05/2025</td>
+                                            <td class="py-4 px-4 text-center">
+                                                <a href="#" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-amber-50 text-amber-700 font-bold text-xs hover:bg-amber-600 hover:text-white transition-all shadow-sm">
+                                                    <i data-lucide="lock" class="w-3.5 h-3.5"></i> Ver Acta
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2.5 Micro-Cursos -->
+                    <div class="accordion-item">
+                        <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="monitor-play" class="text-secondary"></i> 2.5 Micro-Cursos (Fichas de Conocimiento)</span>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform chevron-icon"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 bg-emerald-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                Plataforma de autoaprendizaje rápido. Estos módulos empaquetan el conocimiento técnico-operativo en formatos ágiles y digeribles, diseñados para facilitar la inducción y el entrenamiento continuo de nuestros servidores públicos.
+                            </div>
+                            <div class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 border-t border-slate-100">
+                                <!-- Curso 1 -->
+                                <a href="javascript:void(0)" onclick="openMicroCursoModal('modulo1')" class="block bg-slate-50 rounded-[1.5rem] overflow-hidden border border-slate-100 hover:shadow-md transition-all group cursor-pointer">
+                                    <div class="h-32 bg-slate-200 relative">
+                                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400&h=200" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                        <div class="absolute inset-0 bg-slate-900/30 flex items-center justify-center"><i data-lucide="play-circle" class="text-white w-12 h-12 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all"></i></div>
+                                    </div>
+                                    <div class="p-4">
+                                        <span class="text-[10px] font-black text-blue-500 uppercase tracking-widest block mb-1">Módulo 1</span>
+                                        <h5 class="font-bold text-slate-800 text-sm mb-2 leading-tight">Inducción en Modernización de la Gestión Pública</h5>
+                                    </div>
+                                </a>
+                                <!-- Curso 2 -->
+                                <a href="javascript:void(0)" onclick="openMicroCursoModal('modulo2')" class="block bg-slate-50 rounded-[1.5rem] overflow-hidden border border-slate-100 hover:shadow-md transition-all group cursor-pointer">
+                                    <div class="h-32 bg-slate-200 relative">
+                                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=400&h=200" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                        <div class="absolute inset-0 bg-slate-900/30 flex items-center justify-center"><i data-lucide="play-circle" class="text-white w-12 h-12 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all"></i></div>
+                                    </div>
+                                    <div class="p-4">
+                                        <span class="text-[10px] font-black text-emerald-500 uppercase tracking-widest block mb-1">Módulo 2</span>
+                                        <h5 class="font-bold text-slate-800 text-sm mb-2 leading-tight">Implementación de Gestión por Procesos</h5>
+                                    </div>
+                                </a>
+                                <!-- Curso 3 -->
+                                <a href="javascript:void(0)" onclick="openMicroCursoModal('modulo3')" class="block bg-slate-50 rounded-[1.5rem] overflow-hidden border border-slate-100 hover:shadow-md transition-all group cursor-pointer">
+                                    <div class="h-32 bg-slate-200 relative">
+                                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=400&h=200" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                        <div class="absolute inset-0 bg-slate-900/30 flex items-center justify-center"><i data-lucide="play-circle" class="text-white w-12 h-12 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all"></i></div>
+                                    </div>
+                                    <div class="p-4">
+                                        <span class="text-[10px] font-black text-purple-500 uppercase tracking-widest block mb-1">Módulo 3</span>
+                                        <h5 class="font-bold text-slate-800 text-sm mb-2 leading-tight">Implementación de Gestión del Conocimiento</h5>
+                                    </div>
+                                </a>
+                                <!-- Curso 4 -->
+                                <a href="javascript:void(0)" onclick="openMicroCursoModal('modulo4')" class="block bg-slate-50 rounded-[1.5rem] overflow-hidden border border-slate-100 hover:shadow-md transition-all group cursor-pointer">
+                                    <div class="h-32 bg-slate-200 relative">
+                                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=400&h=200" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                        <div class="absolute inset-0 bg-slate-900/30 flex items-center justify-center"><i data-lucide="play-circle" class="text-white w-12 h-12 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all"></i></div>
+                                    </div>
+                                    <div class="p-4">
+                                        <span class="text-[10px] font-black text-accent uppercase tracking-widest block mb-1">Módulo 4</span>
+                                        <h5 class="font-bold text-slate-800 text-sm mb-2 leading-tight">Implementación de Gestión de Innovación</h5>
+                                    </div>
+                                </a>
+                                <!-- Curso 5 -->
+                                <a href="javascript:void(0)" onclick="openMicroCursoModal('modulo5')" class="block bg-slate-50 rounded-[1.5rem] overflow-hidden border border-slate-100 hover:shadow-md transition-all group cursor-pointer">
+                                    <div class="h-32 bg-slate-200 relative">
+                                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=400&h=200" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                        <div class="absolute inset-0 bg-slate-900/30 flex items-center justify-center"><i data-lucide="play-circle" class="text-white w-12 h-12 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all"></i></div>
+                                    </div>
+                                    <div class="p-4">
+                                        <span class="text-[10px] font-black text-indigo-600 uppercase tracking-widest block mb-1">Módulo 5</span>
+                                        <h5 class="font-bold text-slate-800 text-sm mb-2 leading-tight">Uso de herramientas de IA en la AGROIDEAS</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 3: INNOVACIÓN PÚBLICA
+            =========================================== -->
+            <div id="innovacion" class="tab-pane hidden space-y-8">
+                <p class="text-sm text-slate-500 mb-4 flex items-center gap-2">
+                    <i data-lucide="info" class="w-4 h-4 text-indigo-500"></i>
+                    Haz clic en cada título de sección para desplegar u ocultar su contenido.
+                </p>
+                <div class="divide-y divide-slate-100 bg-white rounded-[2rem] shadow-sm overflow-hidden border border-slate-100" id="accordion-innovacion">
+                    
+                    <!-- 3.1 Portafolio -->
+                    <div class="accordion-item active">
+                        <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="rocket" class="text-accent"></i> 3.1 Portafolio Institucional de Innovación Pública (FIIP)</span>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform rotate-180 chevron-icon"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 bg-amber-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                Vitrina de nuestras iniciativas disruptivas. Aquí monitoreamos los pilotos y proyectos de innovación que buscan resolver problemas públicos mediante nuevos enfoques, tecnologías o mejora radical de servicios.
+                            </div>
+                            <div class="p-6 grid md:grid-cols-2 gap-6 bg-slate-50/50 border-t border-slate-100">
+                                <!-- Proyecto 1 -->
+                                <a href="#" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group relative overflow-hidden">
+                                    <div class="absolute top-0 right-0 p-4"><span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">Piloto</span></div>
+                                    <h4 class="font-bold text-slate-800 text-lg mb-2 pr-20">Uso de Drones para Supervisión de Planes</h4>
+                                    <p class="text-sm text-slate-500 mb-4">Proyecto para optimizar la recopilación de datos en campo usando vehículos aéreos no tripulados.</p>
+                                    <span class="text-accent text-sm font-bold flex items-center gap-1 group-hover:underline">Ver Ficha Técnica del Proyecto <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+                                </a>
+                                <!-- Proyecto 2 -->
+                                <a href="#" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group relative overflow-hidden">
+                                    <div class="absolute top-0 right-0 p-4"><span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">Implementado</span></div>
+                                    <h4 class="font-bold text-slate-800 text-lg mb-2 pr-20">Sistema Inteligente de Trámite (Bot)</h4>
+                                    <p class="text-sm text-slate-500 mb-4">Chatbot de asistencia para orientar a Organizaciones Agrarias en los requisitos documentarios 24/7.</p>
+                                    <span class="text-green-600 text-sm font-bold flex items-center gap-1 group-hover:underline">Ver Ficha Técnica del Proyecto <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3.2 Informes de Evaluación -->
+                    <div class="accordion-item">
+                        <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="file-bar-chart" class="text-accent"></i> 3.2 Informes de Evaluación FIIP</span>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform chevron-icon"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 bg-amber-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                El valor de la innovación se mide. Este apartado consolida los reportes técnicos y métricas de impacto de los proyectos ejecutados, permitiendo escalar lo que funciona y aprender de lo que no.
+                            </div>
+                            <div class="p-0 border-t border-slate-50 overflow-x-auto">
+                                <table class="w-full text-left text-sm">
+                                    <thead class="bg-slate-50 text-slate-500 border-b border-slate-200">
+                                        <tr class="text-[10px] uppercase font-black tracking-widest">
+                                            <th class="p-4">Informe de Evaluación</th>
+                                            <th class="p-4">Periodo</th>
+                                            <th class="p-4">Impacto Medido</th>
+                                            <th class="p-4 text-center">Descarga</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100">
+                                        <tr class="hover:bg-slate-50/50 transition-colors">
+                                            <td class="p-4 font-bold text-slate-700">Evaluación Piloto Drones Q1 2026</td>
+                                            <td class="p-4 text-xs font-mono text-slate-500">2026-I</td>
+                                            <td class="p-4 text-xs text-slate-600">Alta Eficiencia Operativa (+45%)</td>
+                                            <td class="p-4 text-center"><button class="p-2 text-red-600 hover:bg-red-50 rounded-lg"><i data-lucide="file-type-2" class="w-5 h-5"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 4: PUBLICACIONES Y PROCESOS
+            =========================================== -->
+            <div id="publicaciones" class="tab-pane hidden space-y-8">
+                <p class="text-sm text-slate-500 mb-4 flex items-center gap-2">
+                    <i data-lucide="info" class="w-4 h-4 text-indigo-500"></i>
+                    Haz clic en cada título de sección para desplegar u ocultar su contenido.
+                </p>
+                <div class="divide-y divide-slate-100 bg-white rounded-[2rem] shadow-sm overflow-hidden border border-slate-100" id="accordion-publicaciones">
+                    
+                    <!-- 4.1 Arquitectura -->
+                    <div class="accordion-item active">
+                        <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="network" class="text-indigo-600"></i> 4.1 Arquitectura de Procesos</span>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform rotate-180 chevron-icon"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 bg-indigo-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                La radiografía operativa de la entidad. Documentos que estructuran nuestra cadena de valor, desde el Mapa de Procesos de nivel 0 hasta la caracterización detallada (fichas) de los procesos estratégicos, misionales y de apoyo.
+                            </div>
+                            <div class="p-6 grid md:grid-cols-2 gap-6 bg-slate-50/50 border-t border-slate-100">
+                                <a href="#" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="map" class="w-6 h-6"></i></div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Mapa de Procesos (Nivel 0)</h4>
+                                        <p class="text-sm text-slate-500 mt-1">Diagrama general de los procesos estratégicos, misionales y de apoyo.</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i data-lucide="files" class="w-6 h-6"></i></div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Fichas de Productos y Procesos</h4>
+                                        <p class="text-sm text-slate-500 mt-1">Caracterización detallada de cada proceso de la entidad.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4.2 Documentos Operativos -->
+                    <div class="accordion-item">
+                        <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="clipboard-list" class="text-indigo-600"></i> 4.2 Documentos Operativos (MAPRO y BPMN)</span>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform chevron-icon"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 bg-indigo-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                El "cómo lo hacemos" a nivel de detalle. Aquí se concentran los Manuales de Procedimientos y diagramas de flujo que guían el paso a paso del trabajo diario, reduciendo la variabilidad y asegurando la estandarización.
+                            </div>
+                            <div class="p-0 border-t border-slate-50 overflow-x-auto">
+                                <table class="w-full text-left text-sm">
+                                    <thead class="bg-slate-50 text-slate-500 border-b border-slate-200">
+                                        <tr class="text-[10px] uppercase font-black tracking-widest">
+                                            <th class="p-4">Documento</th>
+                                            <th class="p-4">Tipo</th>
+                                            <th class="p-4">Proceso Asociado</th>
+                                            <th class="p-4 text-center">Ver</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100">
+                                        <tr class="hover:bg-slate-50/50 transition-colors">
+                                            <td class="p-4 font-bold text-slate-700">Procedimiento de Evaluación de Elegibilidad</td>
+                                            <td class="p-4 text-xs font-mono text-slate-500">MAPRO / BPMN</td>
+                                            <td class="p-4 text-xs text-slate-600">Proceso Misional 01</td>
+                                            <td class="p-4 text-center"><button class="p-2 text-indigo-600 hover:bg-indigo-50 rounded-lg"><i data-lucide="external-link" class="w-5 h-5"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4.3 Biblioteca -->
+                    <div class="accordion-item">
+                        <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
+                            <span class="font-bold text-slate-700 text-lg flex items-center gap-3"><i data-lucide="book-copy" class="text-indigo-600"></i> 4.3 Biblioteca de Modernización</span>
+                            <div class="flex items-center gap-2 text-slate-400 group-hover:text-indigo-600 transition-colors">
+                                <span class="text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Desplegar</span>
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform chevron-icon"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-6 bg-indigo-50/50 text-slate-600 text-sm italic border-t border-slate-100">
+                                Colección de memorias, boletines y literatura especializada que documentan los hitos, estudios y avances de la entidad en su camino hacia una gestión pública moderna y orientada al ciudadano.
+                            </div>
+                            <div class="p-0 border-t border-slate-50 overflow-x-auto">
+                                <table class="w-full text-left text-sm">
+                                    <thead class="bg-slate-50 text-slate-500 border-b border-slate-200">
+                                        <tr class="text-[10px] uppercase font-black tracking-widest">
+                                            <th class="p-4">Publicación</th>
+                                            <th class="p-4">Fecha</th>
+                                            <th class="p-4 text-center">Descarga</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100">
+                                        <tr class="hover:bg-slate-50/50 transition-colors">
+                                            <td class="p-4 font-bold text-slate-700">Boletín Anual de Calidad Institucional</td>
+                                            <td class="p-4 text-xs font-mono text-slate-500">Dic 2025</td>
+                                            <td class="p-4 text-center"><button class="p-2 text-red-600 hover:bg-red-50 rounded-lg"><i data-lucide="file-type-2" class="w-5 h-5"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+        </main>
+
+    <footer></footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/content-loader.js"></script>
+    
+    <script>
+        // Función expuesta para que content-loader.js la llame después de inyectar datos
+        window.initRepoTable = function() {
+            if ($.fn.DataTable.isDataTable('#repoTable')) {
+                return; // Ya está inicializada
+            }
+            
+            $('#repoTable').DataTable({
+                responsive: true,
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        extend: 'copy',
+                        text: '<i data-lucide="copy" class="w-4 h-4 inline mr-2"></i> Copiar',
+                        className: 'dt-button'
+                    },
+                    {
+                        extend: 'excel',
+                        text: '<i data-lucide="file-spreadsheet" class="w-4 h-4 inline mr-2"></i> Excel',
+                        className: 'dt-button'
+                    },
+                    {
+                        extend: 'pdf',
+                        text: '<i data-lucide="file-text" class="w-4 h-4 inline mr-2"></i> PDF',
+                        className: 'dt-button'
+                    },
+                    {
+                        extend: 'print',
+                        text: '<i data-lucide="printer" class="w-4 h-4 inline mr-2"></i> Imprimir',
+                        className: 'dt-button'
+                    }
+                ],
+                language: {
+                    search: "_INPUT_",
+                    searchPlaceholder: "Buscar publicación...",
+                    lengthMenu: "Mostrar _MENU_ registros",
+                    info: "Mostrando _START_ a _END_ de _TOTAL_ publicaciones",
+                    infoEmpty: "No hay registros disponibles",
+                    infoFiltered: "(filtrado de _MAX_ registros totales)",
+                    paginate: {
+                        first: "Primero",
+                        last: "Último",
+                        next: "Siguiente",
+                        previous: "Anterior"
+                    }
+                },
+                pageLength: 10,
+                drawCallback: function() {
+                    if(typeof lucide !== 'undefined') lucide.createIcons();
+                }
+            });
+        };
+
+        $(document).ready(function() {
+            // Intentar inicializar por si los datos ya están ahí (o content-loader los pone antes)
+            initRepoTable();
+            
+            // Re-vincular iconos al cargar (this was previously inside the DataTable init, now it's separate)
+            setTimeout(() => {
+                if(typeof lucide !== 'undefined') lucide.createIcons();
+            }, 500);
+        });
+
+        // Inicializar Lucide Icons una vez inyectado el header/footer
+        document.addEventListener('DOMContentLoaded', () => {
+            // Re-inicializar Lucide después de que components.js haga su trabajo
+            setTimeout(() => {
+                if(typeof lucide !== 'undefined') lucide.createIcons();
+            }, 100);
+
+            // TABS SYSTEM
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            tabLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    const targetId = link.getAttribute('data-target');
+
+                    // Update Links
+                    tabLinks.forEach(l => {
+                        l.classList.remove('active', 'text-white');
+                        l.classList.add('text-slate-600');
+                    });
+                    link.classList.add('active');
+                    link.classList.remove('text-slate-600');
+
+                    // Update Panes
+                    tabPanes.forEach(pane => {
+                        pane.classList.add('hidden');
+                        pane.classList.remove('block');
+                        if (pane.id === targetId) {
+                            pane.classList.remove('hidden');
+                            pane.classList.add('block');
+                            // Ajustar columnas de DataTable si se vuelve visible
+                            if(targetId === 'publicaciones') {
+                                $('#repoTable').DataTable().columns.adjust().responsive.recalc();
+                            }
+                        }
+                    });
+
+                    // Refresh AOS to fix animation issues on hidden content
+                    if(typeof AOS !== 'undefined') AOS.refresh();
+                });
+            });
+        });
+
+        // ACCORDION LOGIC (Soporta acordeones anidados)
+        function toggleAccordion(button) {
+            const item = button.closest('.accordion-item');
+            const isActive = item.classList.contains('active');
+            
+            // Encuentra el contenedor padre directo (para no afectar sub-acordeones o padres)
+            const parent = item.parentElement;
+            
+            // Solo buscar items que sean hijos directos de este contenedor
+            const siblingItems = Array.from(parent.children).filter(child => child.classList.contains('accordion-item'));
+            
+            siblingItems.forEach(i => {
+                i.classList.remove('active');
+                const icon = i.querySelector('.chevron-icon');
+                if(icon) icon.classList.remove('rotate-180');
+            });
+
+            if (!isActive) {
+                item.classList.add('active');
+                const icon = item.querySelector('.chevron-icon');
+                if(icon) icon.classList.add('rotate-180');
+            }
+        }
+
+        // AOS Init
+        if(typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 50
+            });
+        }
+    </script>
+
+    <!-- MODAL MICRO-CURSOS -->
+    <div id="microCursoModal" class="fixed inset-0 z-[100] hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center opacity-0 transition-opacity duration-300">
+        <div class="bg-white w-[90%] max-w-2xl rounded-3xl shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300 relative flex flex-col max-h-[90vh]">
+            <!-- Header -->
+            <div class="px-6 py-4 bg-primary text-white flex justify-between items-center shrink-0">
+                <div>
+                    <span id="mcModalEje" class="text-[10px] font-bold text-emerald-200 uppercase tracking-widest bg-white/10 px-2 py-1 rounded-md mb-1 inline-block">EJE</span>
+                    <h3 id="mcModalTitle" class="text-xl font-bold leading-tight">Título del Módulo</h3>
+                </div>
+                <button onclick="closeMicroCursoModal()" class="text-white/70 hover:text-white transition-colors bg-white/10 hover:bg-white/20 p-2 rounded-full">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <!-- Body -->
+            <div class="p-6 overflow-y-auto flex-1 bg-slate-50">
+                <p id="mcModalDesc" class="text-slate-600 text-sm mb-6 pb-4 border-b border-slate-200">Descripción del módulo...</p>
+                
+                <h4 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                    <i data-lucide="list-video" class="w-5 h-5 text-primary"></i> Subtemas disponibles:
+                </h4>
+                
+                <div id="mcSubtemasContainer" class="space-y-3">
+                    <!-- Subtemas se cargarán aquí vía JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/microcurso-modal.js"></script>
+</body>
+</html>

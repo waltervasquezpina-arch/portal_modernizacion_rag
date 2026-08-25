@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro-Curso - Aula Virtual</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1A5336',
+              secondary: '#53A548',
+              accent: '#F1C40F',
+              bglight: '#F4F6F5',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Montserrat', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col font-sans">
+    
+    <!-- Navbar / Header Mini -->
+    <header class="bg-white border-b border-slate-200 px-6 py-3 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center gap-4">
+            <a href="repositorio.html" id="backButton" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 text-slate-600 transition-colors">
+                <i data-lucide="arrow-left" class="w-5 h-5"></i>
+            </a>
+            <div>
+                <span id="moduloEjeLabel" class="text-[10px] font-bold text-primary uppercase tracking-widest block mb-0.5">Cargando...</span>
+                <h1 id="moduloTituloLabel" class="text-sm font-bold text-slate-800 leading-tight">...</h1>
+            </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <div class="hidden sm:flex flex-col items-end mr-4">
+                <span class="text-[10px] font-bold text-slate-400 uppercase">Progreso del Subtema</span>
+                <div class="w-32 h-2 bg-slate-200 rounded-full mt-1 overflow-hidden">
+                    <div id="progressBar" class="h-full bg-secondary w-1/4 transition-all duration-500"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 sm:p-6 lg:p-8 flex flex-col lg:flex-row gap-6">
+        
+        <!-- Área Principal (Video y Desc) -->
+        <div class="flex-1 flex flex-col gap-6">
+            <!-- Video Container -->
+            <div class="bg-slate-900 rounded-[2rem] overflow-hidden aspect-video shadow-lg relative border border-slate-800">
+                <!-- Simulador de iframe de Youtube/Google Vids -->
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-slate-500">
+                    <i data-lucide="play-circle" class="w-16 h-16 mb-2 text-slate-400 opacity-50"></i>
+                    <p class="text-sm">Área de visualización del video (Google Vids / YouTube)</p>
+                    <p id="videoUrlPreview" class="text-xs opacity-50 font-mono mt-2"></p>
+                </div>
+                <!-- iframe real comentado para la maqueta -->
+                <!-- <iframe id="courseVideo" src="" class="w-full h-full absolute top-0 left-0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+            </div>
+
+            <!-- Header Contenido -->
+            <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100">
+                <div class="flex flex-wrap justify-between items-start gap-4 mb-4">
+                    <div>
+                        <span id="subtemaIdBadge" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 font-bold text-xs rounded-lg mb-2">Subtema A.1</span>
+                        <h2 id="subtemaTitulo" class="text-2xl font-bold text-slate-800">Cargando Título...</h2>
+                    </div>
+                    <button class="shrink-0 flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl font-bold text-sm transition-colors">
+                        <i data-lucide="download" class="w-4 h-4"></i>
+                        <span>Descargar Ficha (PDF)</span>
+                    </button>
+                </div>
+                <p id="subtemaDesc" class="text-slate-600 leading-relaxed text-sm">
+                    Cargando descripción detallada del curso...
+                </p>
+            </div>
+        </div>
+
+        <!-- Sidebar (Test & Flow) -->
+        <div class="w-full lg:w-80 flex flex-col gap-6">
+            
+            <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100 sticky top-24">
+                <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                    <i data-lucide="check-square" class="w-5 h-5 text-primary"></i> Check de Aprendizaje
+                </h3>
+                
+                <div id="quizContainer" class="space-y-4">
+                    <!-- Preguntas inyectadas vía JS -->
+                    <p class="text-sm text-slate-500 italic">Responde las preguntas tras ver el video para validar tu aprendizaje.</p>
+                </div>
+
+                <div class="mt-6 pt-6 border-t border-slate-100">
+                    <button id="btnFinalizar" class="w-full bg-slate-200 text-slate-400 font-bold py-3 rounded-xl cursor-not-allowed transition-colors" disabled>
+                        Aprobar y Finalizar Módulo
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        // Init Lucide
+        lucide.createIcons();
+    </script>
+    <script src="js/microcurso.js"></script>
+</body>
+</html>

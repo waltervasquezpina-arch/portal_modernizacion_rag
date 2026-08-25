@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos de Gestión - AGROIDEAS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1A5336',
+              secondary: '#53A548',
+              accent: '#F1C40F',
+              bglight: '#F4F6F5',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Montserrat', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/modern-styles.css">
+</head>
+
+<body class="bg-slate-50 font-sans text-slate-900 overflow-x-hidden">
+
+    <!-- Global Header -->
+    <header></header>
+
+    <main class="pt-32 pb-20">
+        <!-- Hero Section -->
+        <section class="relative py-16 bg-primary text-white overflow-hidden mb-12 shadow-2xl">
+            <div class="absolute inset-0 opacity-20">
+                <div
+                    class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30">
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <nav
+                    class="flex items-center space-x-2 text-slate-400 text-sm mb-6 uppercase tracking-widest font-bold">
+                    <a href="index.html" class="hover:text-white transition-colors">Inicio</a>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    <span>Repositorio Institucional</span>
+                </nav>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">
+                    Documentos de <span class="text-accent">Gestión</span>
+                </h1>
+                <p class="text-lg text-slate-400 max-w-2xl leading-relaxed">
+                    Acceso transparente a la normativa y herramientas de gestión que rigen el funcionamiento del
+                    Programa de Compensaciones para la Competitividad.
+                </p>
+            </div>
+        </section>
+
+        <!-- Document Grid -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Card 1: Gestión por Procesos -->
+                <div class="bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up">
+                    <div class="w-14 h-14 bg-emerald-50 text-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                        <i data-lucide="refresh-cw" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">1. Gestión por Procesos</h3>
+                    <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider mb-4">Operatividad y Estandarización</p>
+                    <ul class="text-sm text-slate-600 mb-6 space-y-3">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                            <span><a href="#" class="hover:text-emerald-700 hover:underline"><strong>Fichas Técnicas y Diagramas de Flujo (BPMN):</strong></a> Mapas visuales de cómo se aprueba un Plan de Negocio o un Incentivo (IAT), paso a paso.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                            <span><a href="#" class="hover:text-emerald-700 hover:underline"><strong>Manuales de Procedimientos Internos (MAPRO):</strong></a> Guías detalladas de "cómo hacer" tareas específicas para evaluadores y sectoristas.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                            <span><a href="#" class="hover:text-emerald-700 hover:underline"><strong>Matrices de Riesgos de Procesos:</strong></a> Documentos que identifican cuellos de botella operativos y sus controles.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                            <span><a href="#" class="hover:text-emerald-700 hover:underline"><strong>Catálogos de Servicios Internos:</strong></a> Qué hace cada unidad y cuáles son sus tiempos de respuesta (SLAs internos).</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Gestión del Conocimiento -->
+                <div class="bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-blue-50 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i data-lucide="brain-circuit" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">2. Gestión del Conocimiento</h3>
+                    <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider mb-4">Capital Intelectual</p>
+                    <ul class="text-sm text-slate-600 mb-6 space-y-3">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500 shrink-0 mt-0.5"></i>
+                            <span><a href="#" class="hover:text-blue-700 hover:underline"><strong>Sistematización de Éxitos y Fracasos:</strong></a> Informes sobre por qué ciertos Planes de Negocio agrario fallaron o triunfaron.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500 shrink-0 mt-0.5"></i>
+                            <span><a href="#" class="hover:text-blue-700 hover:underline"><strong>Guías Metodológicas:</strong></a> Plantillas y herramientas para ayudar a las OA a formular mejores expedientes.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500 shrink-0 mt-0.5"></i>
+                            <span><a href="#" class="hover:text-blue-700 hover:underline"><strong>Respuestas a Preguntas Frecuentes (FAQs):</strong></a> Resoluciones a consultas recurrentes de especialistas y productores.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500 shrink-0 mt-0.5"></i>
+                            <span><a href="#" class="hover:text-blue-700 hover:underline"><strong>Directorio de Expertos (Páginas Amarillas):</strong></a> Identificación del talento: "Quién sabe qué" dentro de AGROIDEAS.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Calidad e Innovación -->
+                <div class="bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-amber-50 text-accent rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i data-lucide="award" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">3. Calidad e Innovación</h3>
+                    <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider mb-4">Mejora Continua</p>
+                    <ul class="text-sm text-slate-600 mb-6 space-y-3">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i>
+                            <span><a href="#" class="hover:text-amber-700 hover:underline"><strong>Resultados de Encuestas de Satisfacción:</strong></a> Reportes visuales o dashboards que muestran qué opinan las OA de los servicios.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i>
+                            <span><a href="#" class="hover:text-amber-700 hover:underline"><strong>Planes de Mejora Continua:</strong></a> Documentos que muestran qué procesos se están optimizando para reducir tiempos y simplificar trámites.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i>
+                            <span><a href="#" class="hover:text-amber-700 hover:underline"><strong>Proyectos de Innovación o Pilotos:</strong></a> Documentación y resultados de la prueba de nuevas tecnologías (ej. drones o firmas digitales).</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: Directivas -->
+                <div class="bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-purple-50 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i data-lucide="gavel" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">4. Directivas y Lineamientos</h3>
+                    <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider mb-4">Normativa Interna Específica</p>
+                    <ul class="text-sm text-slate-600 mb-6 space-y-3">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-500 shrink-0 mt-0.5"></i>
+                            <span><a href="#" class="hover:text-purple-700 hover:underline"><strong>Directivas Técnicas de AGROIDEAS:</strong></a> Lineamientos específicos de operatividad de campo, rendición de viáticos, uso de SGDD, etc.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-500 shrink-0 mt-0.5"></i>
+                            <span><a href="#" class="hover:text-purple-700 hover:underline"><strong>Memorandos Múltiples o Circulares Clave:</strong></a> Documentos que marcan precedentes o establecen nuevas reglas de juego internas.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-500 shrink-0 mt-0.5"></i>
+                            <span><a href="#" class="hover:text-purple-700 hover:underline"><strong>Guías de Uso de Sistemas Informáticos:</strong></a> Manuales de usuario para los sistemas internos (ERPs, plataformas de seguimiento).</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer></footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/components.js"></script>
+</body>
+
+</html>

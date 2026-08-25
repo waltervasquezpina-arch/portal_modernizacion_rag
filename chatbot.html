@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente Virtual SAMGP - AGROIDEAS</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pcm-red': '#dc2626',
+                        'agro-blue': '#1e3a8a',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Modern Portal & Chatbot Styles -->
+    <link rel="stylesheet" href="css/modern-styles.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body class="bg-slate-100 text-slate-900 flex flex-col min-h-screen">
+
+    <!-- Header Centralizado desde components.js -->
+    <header></header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow pt-20">
+        
+        <!-- Banner Superior del Chat -->
+        <div class="bg-slate-900 text-white py-4 border-b border-white/10 shadow-lg relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/40 via-red-900/20 to-transparent pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-10">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-600 to-red-600 flex items-center justify-center shadow-md">
+                        <i data-lucide="bot" class="w-6 h-6 text-white animate-pulse"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-lg sm:text-xl font-black tracking-tight leading-none flex items-center gap-2">
+                            Asistente IA - SAMGP al 2030
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5 animate-ping"></span>
+                                RAG LocalStorage Activo
+                            </span>
+                        </h1>
+                        <p class="text-xs text-slate-400 mt-1">Especialista normativo en la Ley N° 27658, Política Nacional de Modernización al 2030 y Normas Técnicas 2025</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-2 w-full sm:w-auto justify-end">
+                    <button id="btn-open-settings" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 transition-all border border-white/15 shadow-sm" title="Configurar IA en vivo o LocalStorage">
+                        <i data-lucide="settings" class="w-4 h-4 text-blue-300"></i>
+                        <span>Ajustes IA</span>
+                    </button>
+                    <button id="btn-export-chat" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 transition-all border border-white/15 shadow-sm" title="Exportar para informe técnico">
+                        <i data-lucide="download" class="w-4 h-4 text-emerald-300"></i>
+                        <span>Exportar</span>
+                    </button>
+                    <button id="btn-clear-chat" class="px-3.5 py-2 rounded-xl bg-red-500/20 hover:bg-red-500/30 text-red-300 border border-red-500/30 text-xs font-semibold flex items-center gap-1.5 transition-all shadow-sm" title="Limpiar conversaciones anteriores">
+                        <i data-lucide="trash-2" class="w-4 h-4"></i>
+                        <span class="hidden md:inline">Limpiar Historial</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel de Conversación Principal (Grid 2 Columnas) -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 chat-container-height flex flex-col lg:flex-row gap-6">
+            
+            <!-- COLUMNA IZQUIERDA: Filtros y Categorías Normativas -->
+            <aside class="w-full lg:w-72 bg-white rounded-3xl border border-slate-200 shadow-xl flex flex-col overflow-hidden shrink-0">
+                <div class="p-4 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-black uppercase text-slate-500 tracking-wider flex items-center gap-1.5">
+                        <i data-lucide="filter" class="w-4 h-4 text-primary"></i>
+                        Áreas Normativas
+                    </span>
+                    <span class="text-[11px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded-full" id="modules-count">8 Módulos</span>
+                </div>
+
+                <div class="p-2 overflow-y-auto flex-grow custom-scrollbar space-y-1" id="category-filter-list">
+                    <!-- Categorías inyectadas dinámicamente o por defecto -->
+                    <button data-cat="all" class="cat-btn w-full text-left px-3.5 py-3 rounded-2xl font-bold text-xs bg-primary text-white flex items-center justify-between transition-all shadow-md">
+                        <span class="flex items-center gap-2.5 truncate">
+                            <i data-lucide="layers" class="w-4 h-4 shrink-0"></i>
+                            <span class="truncate">Todos los Temas</span>
+                        </span>
+                        <i data-lucide="check" class="w-4 h-4 shrink-0"></i>
+                    </button>
+
+                    <button data-cat="marco_modernizacion" class="cat-btn w-full text-left px-3.5 py-3 rounded-2xl font-semibold text-xs text-slate-600 hover:bg-slate-50 flex items-center justify-between transition-all">
+                        <span class="flex items-center gap-2.5 truncate">
+                            <i data-lucide="scale" class="w-4 h-4 text-red-600 shrink-0"></i>
+                            <span class="truncate">0. Marco y Ley 27658</span>
+                        </span>
+                    </button>
+
+                    <button data-cat="politica_2030" class="cat-btn w-full text-left px-3.5 py-3 rounded-2xl font-semibold text-xs text-slate-600 hover:bg-slate-50 flex items-center justify-between transition-all">
+                        <span class="flex items-center gap-2.5 truncate">
+                            <i data-lucide="compass" class="w-4 h-4 text-primary shrink-0"></i>
+                            <span class="truncate">1. Política al 2030</span>
+                        </span>
+                    </button>
+
+                    <button data-cat="reglamento_samgp" class="cat-btn w-full text-left px-3.5 py-3 rounded-2xl font-semibold text-xs text-slate-600 hover:bg-slate-50 flex items-center justify-between transition-all">
+                        <span class="flex items-center gap-2.5 truncate">
+                            <i data-lucide="book-open" class="w-4 h-4 text-secondary shrink-0"></i>
+                            <span class="truncate">2. Reglamento SAMGP</span>
+                        </span>
+                    </button>
+
+                    <button data-cat="gestion_procesos" class="cat-btn w-full text-left px-3.5 py-3 rounded-2xl font-semibold text-xs text-slate-600 hover:bg-slate-50 flex items-center justify-between transition-all">
+                        <span class="flex items-center gap-2.5 truncate">
+                            <i data-lucide="settings-2" class="w-4 h-4 text-indigo-600 shrink-0"></i>
+                            <span class="truncate">3. Gestión por Procesos</span>
+                        </span>
+                    </button>
+
+                    <button data-cat="gestion_calidad" class="cat-btn w-full text-left px-3.5 py-3 rounded-2xl font-semibold text-xs text-slate-600 hover:bg-slate-50 flex items-center justify-between transition-all">
+                        <span class="flex items-center gap-2.5 truncate">
+                            <i data-lucide="award" class="w-4 h-4 text-accent shrink-0"></i>
+                            <span class="truncate">4. Calidad de Servicios</span>
+                        </span>
+                    </button>
+
+                    <button data-cat="gestion_conocimiento" class="cat-btn w-full text-left px-3.5 py-3 rounded-2xl font-semibold text-xs text-slate-600 hover:bg-slate-50 flex items-center justify-between transition-all">
+                        <span class="flex items-center gap-2.5 truncate">
+                            <i data-lucide="brain" class="w-4 h-4 text-primary shrink-0"></i>
+                            <span class="truncate">5. Gestión Conocimiento</span>
+                        </span>
+                    </button>
+
+                    <button data-cat="innovacion_publica" class="cat-btn w-full text-left px-3.5 py-3 rounded-2xl font-semibold text-xs text-slate-600 hover:bg-slate-50 flex items-center justify-between transition-all">
+                        <span class="flex items-center gap-2.5 truncate">
+                            <i data-lucide="lightbulb" class="w-4 h-4 text-cyan-600 shrink-0"></i>
+                            <span class="truncate">6. Innovación Pública</span>
+                        </span>
+                    </button>
+
+                    <button data-cat="organizacion_estado" class="cat-btn w-full text-left px-3.5 py-3 rounded-2xl font-semibold text-xs text-slate-600 hover:bg-slate-50 flex items-center justify-between transition-all">
+                        <span class="flex items-center gap-2.5 truncate">
+                            <i data-lucide="building-2" class="w-4 h-4 text-slate-600 shrink-0"></i>
+                            <span class="truncate">7. Organización Estado</span>
+                        </span>
+                    </button>
+
+                    <button data-cat="instructivos_agroideas" class="cat-btn w-full text-left px-3.5 py-3 rounded-2xl font-semibold text-xs text-slate-600 hover:bg-slate-50 flex items-center justify-between transition-all">
+                        <span class="flex items-center gap-2.5 truncate">
+                            <i data-lucide="file-text" class="w-4 h-4 text-secondary shrink-0"></i>
+                            <span class="truncate">8. Instructivos Operativos</span>
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Tarjeta informativa inferior en sidebar -->
+                <div class="p-4 bg-gradient-to-br from-primary to-primary text-white rounded-b-3xl">
+                    <div class="flex items-center gap-2 text-xs font-bold text-amber-400 mb-1">
+                        <i data-lucide="file-check-2" class="w-4 h-4"></i>
+                        <span>Respaldo Documental</span>
+                    </div>
+                    <p class="text-[11px] text-slate-300 leading-tight font-light">Todas las respuestas citan la norma exacta y ofrecen enlace directo al PDF en el repositorio.</p>
+                </div>
+            </aside>
+
+            <!-- COLUMNA DERECHA: Lienzo del Chat y Entrada de Datos -->
+            <section class="flex-grow bg-white rounded-3xl border border-slate-200 shadow-2xl flex flex-col overflow-hidden relative">
+                
+                <!-- Chips de Preguntas Sugeridas (Quick Prompts) -->
+                <div class="p-3 bg-slate-50 border-b border-slate-100 overflow-x-auto flex items-center gap-2 shrink-0 custom-scrollbar" id="quick-prompts-container">
+                    <span class="text-xs font-bold text-slate-500 uppercase tracking-wider shrink-0 mr-1 flex items-center gap-1">
+                        <i data-lucide="help-circle" class="w-4 h-4 text-primary"></i> Preguntas Sugeridas:
+                    </span>
+                    <button class="quick-prompt-chip" data-query="¿Cuál es la finalidad de la Ley N° 27658?">
+                        <span>❓ ¿Cuál es la finalidad de la Ley 27658?</span>
+                    </button>
+                    <button class="quick-prompt-chip" data-query="¿Cuáles son los 4 objetivos prioritarios de la PNMGP al 2030?">
+                        <span>❓ ¿Cuáles son los 4 objetivos de la Política 2030?</span>
+                    </button>
+                    <button class="quick-prompt-chip" data-query="¿Cómo se clasifican los procesos según la NT N° 002-2025-PCM/SGP?">
+                        <span>❓ ¿Cómo se clasifican los procesos (NT 002-2025)?</span>
+                    </button>
+                    <button class="quick-prompt-chip" data-query="¿Cuáles son las fases de la Gestión del Conocimiento (RSGP N° 001-2025)?">
+                        <span>❓ ¿Cuáles son las fases de Gestión del Conocimiento?</span>
+                    </button>
+                    <button class="quick-prompt-chip" data-query="¿Qué establece la Norma Técnica de Innovación Pública (RSGP N° 007-2025)?">
+                        <span>❓ ¿Qué establece la Norma de Innovación Pública?</span>
+                    </button>
+                    <button class="quick-prompt-chip" data-query="¿Cuál es la diferencia entre el ROF y el MOP según los lineamientos de organización?">
+                        <span>❓ ¿Cuál es la diferencia entre ROF y MOP?</span>
+                    </button>
+                </div>
+
+                <!-- Historial y Mensajes de Chat -->
+                <div id="chat-messages" class="flex-grow p-6 overflow-y-auto custom-scrollbar space-y-6">
+                    <!-- Los mensajes se inyectan dinámicamente vía JS -->
+                </div>
+
+                <!-- Indicador de Tipeo / Buscando -->
+                <div id="typing-indicator" class="hidden px-6 py-2 bg-slate-50 border-t border-slate-100 flex items-center gap-3 shrink-0">
+                    <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-primary shrink-0">
+                        <i data-lucide="bot" class="w-4 h-4"></i>
+                    </div>
+                    <div class="text-xs text-slate-500 font-semibold flex items-center gap-2">
+                        <span>Analizando corpus normativo y legal SAMGP...</span>
+                        <div class="typing-dots">
+                            <span class="typing-dot"></span>
+                            <span class="typing-dot"></span>
+                            <span class="typing-dot"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Barra de Entrada Inferior -->
+                <div class="p-4 bg-white border-t border-slate-200 shrink-0">
+                    <form id="chat-form" class="flex items-end gap-3 relative">
+                        <div class="flex-grow relative">
+                            <textarea id="chat-input" rows="1" placeholder="Escribe tu consulta sobre modernización, procesos, calidad o leyes (Ej. ¿Qué es el valor público?)..." 
+                                class="w-full bg-slate-50 border border-slate-300 rounded-2xl px-4 py-3.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all pr-12 resize-none max-h-32"></textarea>
+                            
+                            <!-- Botón de Reconocimiento de Voz -->
+                            <button type="button" id="btn-voice" class="absolute right-3 bottom-3 text-slate-400 hover:text-primary p-1 rounded-lg hover:bg-blue-50 transition-colors" title="Dictar consulta por voz">
+                                <i data-lucide="mic" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+
+                        <button type="submit" id="btn-send" class="bg-blue-700 hover:bg-blue-800 text-white p-3.5 rounded-2xl shadow-lg shadow-blue-600/30 transition-all flex items-center justify-center shrink-0 group">
+                            <i data-lucide="send" class="w-5 h-5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                        </button>
+                    </form>
+                    <p class="text-[10px] text-center text-slate-400 mt-2">
+                        💡 Las respuestas están basadas estrictamente en la <strong>Ley N° 27658</strong>, <strong>DS N° 103-2022-PCM</strong> y <strong>Normas Técnicas 2025</strong>. Prototipo de alto nivel en LocalStorage.
+                    </p>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Centralizado desde components.js -->
+    <footer></footer>
+
+    <!-- ==========================================================================
+         MODAL DE CONFIGURACIÓN (RAG LOCAL vs LIVE GEMINI API)
+         ========================================================================== -->
+    <div id="settings-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl border border-slate-200 transform transition-all animate-in fade-in zoom-in-95">
+            <div class="flex justify-between items-center pb-4 border-b border-slate-100 mb-6">
+                <div class="flex items-center gap-3">
+                    <div class="p-2.5 bg-blue-50 text-primary rounded-2xl">
+                        <i data-lucide="sliders" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-black text-slate-900">Configuración del Motor IA</h3>
+                        <p class="text-xs text-slate-500">Selecciona entre simulación offline o LLM en vivo</p>
+                    </div>
+                </div>
+                <button type="button" class="btn-close-modal text-slate-400 hover:text-slate-600 p-1.5 rounded-xl hover:bg-slate-100">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Toggle de Modo -->
+                <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+                    <label class="flex items-center justify-between cursor-pointer">
+                        <div>
+                            <span class="text-sm font-bold text-slate-900 block">Activar IA Generativa en Vivo (Google Gemini)</span>
+                            <span class="text-xs text-slate-500 block mt-0.5">Si está desactivado, el sistema usa el RAG LocalStorage ultrarrápido sin costos ni conexión externa.</span>
+                        </div>
+                        <input type="checkbox" id="toggle-live-llm" class="sr-only peer">
+                        <div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary relative"></div>
+                    </label>
+                </div>
+
+                <!-- Input para API Key -->
+                <div id="api-key-container" class="space-y-2 transition-all">
+                    <label for="gemini-api-key" class="block text-xs font-bold uppercase tracking-wider text-slate-700">
+                        Google Gemini API Key (Opcional)
+                    </label>
+                    <input type="password" id="gemini-api-key" placeholder="AIzaSy..." 
+                           class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600 font-mono">
+                    <p class="text-[11px] text-slate-500">
+                        Tu clave se almacena exclusivamente en la memoria local del navegador (`LocalStorage`) y nunca se comparte.
+                    </p>
+                </div>
+
+                <div class="p-3.5 bg-blue-50/70 rounded-2xl border border-blue-100 flex gap-3 items-start">
+                    <i data-lucide="info" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+                    <p class="text-xs text-blue-900 leading-relaxed">
+                        <strong>Modo Prototipo Recomendado:</strong> El RAG LocalStorage ya contiene las respuestas y citas legales de los 8 módulos normativos SAMGP listos para usar sin necesidad de clave API.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-8 flex justify-end gap-3 pt-4 border-t border-slate-100">
+                <button type="button" class="btn-close-modal px-5 py-2.5 rounded-xl font-semibold text-sm text-slate-600 hover:bg-slate-100 transition-colors">
+                    Cancelar
+                </button>
+                <button type="button" id="btn-save-settings" class="px-6 py-2.5 rounded-xl font-bold text-sm bg-blue-700 hover:bg-blue-800 text-white shadow-lg shadow-blue-600/30 transition-all">
+                    Guardar Cambios
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         MODAL DE EXPORTACIÓN (TXT INFORME TÉCNICO)
+         ========================================================================== -->
+    <div id="export-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-8 shadow-2xl border border-slate-200 transform transition-all animate-in fade-in zoom-in-95">
+            <div class="flex justify-between items-center pb-4 border-b border-slate-100 mb-4">
+                <div class="flex items-center gap-3">
+                    <div class="p-2.5 bg-emerald-50 text-secondary rounded-2xl">
+                        <i data-lucide="file-text" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-black text-slate-900">Exportar Historial Normativo</h3>
+                        <p class="text-xs text-slate-500">Sustento documental para informes técnicos o resoluciones</p>
+                    </div>
+                </div>
+                <button type="button" class="btn-close-export text-slate-400 hover:text-slate-600 p-1.5 rounded-xl hover:bg-slate-100">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <textarea id="export-textarea" readonly rows="12" class="w-full bg-slate-900 text-accent font-mono text-xs p-4 rounded-2xl border border-slate-800 custom-scrollbar focus:outline-none"></textarea>
+
+            <div class="mt-6 flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 border-t border-slate-100">
+                <span class="text-xs text-slate-500" id="export-status">Listo para copiar o descargar.</span>
+                <div class="flex gap-3 w-full sm:w-auto justify-end">
+                    <button type="button" id="btn-copy-export" class="px-5 py-2.5 rounded-xl font-bold text-sm bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center gap-2 transition-all">
+                        <i data-lucide="copy" class="w-4 h-4"></i>
+                        <span>Copiar Portapapeles</span>
+                    </button>
+                    <button type="button" id="btn-download-export" class="px-6 py-2.5 rounded-xl font-bold text-sm bg-secondary hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/30 flex items-center gap-2 transition-all">
+                        <i data-lucide="download" class="w-4 h-4"></i>
+                        <span>Descargar .TXT</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts de Inyección de Componentes y Motor -->
+    <script src="js/components.js"></script>
+    <script src="js/chatbot-engine.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            // Inicializar íconos
+            lucide.createIcons();
+
+            // Referencias del DOM
+            const chatMessages = document.getElementById('chat-messages');
+            const chatForm = document.getElementById('chat-form');
+            const chatInput = document.getElementById('chat-input');
+            const typingIndicator = document.getElementById('typing-indicator');
+            const quickPromptsContainer = document.getElementById('quick-prompts-container');
+            const categoryFilterList = document.getElementById('category-filter-list');
+            
+            // Modales
+            const settingsModal = document.getElementById('settings-modal');
+            const exportModal = document.getElementById('export-modal');
+            const btnOpenSettings = document.getElementById('btn-open-settings');
+            const btnSaveSettings = document.getElementById('btn-save-settings');
+            const btnClearChat = document.getElementById('btn-clear-chat');
+            const btnExportChat = document.getElementById('btn-export-chat');
+            const toggleLiveLLM = document.getElementById('toggle-live-llm');
+            const inputApiKey = document.getElementById('gemini-api-key');
+
+            // 1. Inicializar Motor Chatbot
+            await window.SAMGPChatbot.init();
+
+            // Cargar estado inicial
+            renderFullHistory();
+            syncSettingsUI();
+
+            // 2. Renderizar Historial del Chat
+            function renderFullHistory() {
+                chatMessages.innerHTML = '';
+                window.SAMGPChatbot.history.forEach(msg => appendMessageBubble(msg));
+                scrollToBottom();
+            }
+
+            function appendMessageBubble(msg) {
+                const isUser = msg.sender === 'user';
+                const wrapper = document.createElement('div');
+                wrapper.className = `flex gap-3 ${isUser ? 'justify-end' : 'justify-start'} animate-in fade-in slide-in-from-bottom-2 duration-300`;
+
+                // Avatar IA
+                const avatar = isUser ? '' : `
+                    <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-700 to-red-600 flex items-center justify-center text-white shadow-md shrink-0 self-start mt-1">
+                        <i data-lucide="bot" class="w-5 h-5"></i>
+                    </div>`;
+
+                // Citas / Fuentes normativas con botón de descarga PDF exacto
+                let sourcesHtml = '';
+                if (msg.sources && msg.sources.length > 0) {
+                    sourcesHtml = `<div class="mt-4 pt-3 border-t border-slate-200/60 space-y-2">
+                        <span class="text-[11px] font-black uppercase tracking-wider text-slate-500 block flex items-center gap-1">
+                            <i data-lucide="book-check" class="w-3.5 h-3.5 text-red-600"></i> Sustento Normativo Oficial:
+                        </span>`;
+                    
+                    msg.sources.forEach(src => {
+                        sourcesHtml += `
+                            <div class="citation-badge flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                                <div>
+                                    <span class="text-xs font-bold text-slate-900 block">${src.title}</span>
+                                    <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block mt-0.5">Repositorio SAMGP 2026</span>
+                                </div>
+                                ${src.pdf_path ? `
+                                    <a href="${src.pdf_path}" target="_blank" class="px-3 py-1.5 rounded-lg bg-blue-50 hover:bg-primary text-blue-700 hover:text-white text-xs font-bold flex items-center gap-1.5 transition-all shrink-0 shadow-sm border border-blue-200/60">
+                                        <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                                        <span>Ver / Descargar PDF</span>
+                                    </a>` : ''}
+                            </div>`;
+                    });
+                    sourcesHtml += `</div>`;
+                }
+
+                wrapper.innerHTML = `
+                    ${avatar}
+                    <div class="max-w-2xl w-full">
+                        <div class="flex items-center gap-2 mb-1 ${isUser ? 'justify-end' : 'justify-start'}">
+                            <span class="text-xs font-bold ${isUser ? 'text-blue-800' : 'text-slate-700'}">${isUser ? 'Tú (Consulta)' : 'Asistente SAMGP'}</span>
+                            <span class="text-[10px] text-slate-400">${msg.timestamp}</span>
+                        </div>
+                        <div class="p-5 text-sm leading-relaxed ${isUser ? 'chat-bubble-user font-medium' : 'chat-bubble-ai text-slate-800'}">
+                            <div class="prose prose-sm max-w-none">${msg.text}</div>
+                            ${sourcesHtml}
+                        </div>
+                    </div>`;
+
+                chatMessages.appendChild(wrapper);
+                lucide.createIcons({ root: wrapper });
+            }
+
+            function scrollToBottom() {
+                setTimeout(() => {
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 50);
+            }
+
+            // 3. Envío de formulario y Procesamiento de la Consulta
+            chatForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const text = chatInput.value.trim();
+                if (!text) return;
+
+                chatInput.value = '';
+                chatInput.style.height = 'auto';
+
+                // Mostrar mensaje de usuario inmediatamente
+                const userMsgPreview = {
+                    id: 'msg_u_preview_' + Date.now(),
+                    sender: 'user',
+                    text: text,
+                    timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+                };
+                appendMessageBubble(userMsgPreview);
+                scrollToBottom();
+
+                // Mostrar indicador de tipeo
+                typingIndicator.classList.remove('hidden');
+                scrollToBottom();
+
+                // Simular pequeño retardo o llamar al motor
+                setTimeout(async () => {
+                    const { aiMsg } = await window.SAMGPChatbot.processUserQuery(text);
+                    typingIndicator.classList.add('hidden');
+                    appendMessageBubble(aiMsg);
+                    scrollToBottom();
+                }, 600);
+            });
+
+            // Autoajuste del textarea
+            chatInput.addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = (this.scrollHeight) + 'px';
+            });
+
+            chatInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    chatForm.dispatchEvent(new Event('submit'));
+                }
+            });
+
+            // 4. Prompts Rápidos (Chips)
+            quickPromptsContainer.addEventListener('click', (e) => {
+                const chip = e.target.closest('.quick-prompt-chip');
+                if (!chip) return;
+                const query = chip.getAttribute('data-query');
+                if (query) {
+                    chatInput.value = query;
+                    chatForm.dispatchEvent(new Event('submit'));
+                }
+            });
+
+            // 5. Filtros por Categoría en Sidebar
+            categoryFilterList.addEventListener('click', (e) => {
+                const btn = e.target.closest('.cat-btn');
+                if (!btn) return;
+                
+                // Desmarcar todos
+                document.querySelectorAll('.cat-btn').forEach(b => {
+                    b.className = 'cat-btn w-full text-left px-3.5 py-3 rounded-2xl font-semibold text-xs text-slate-600 hover:bg-slate-50 flex items-center justify-between transition-all';
+                    const checkIcon = b.querySelector('[data-lucide="check"]');
+                    if (checkIcon) checkIcon.remove();
+                });
+
+                // Marcar el seleccionado
+                btn.className = 'cat-btn w-full text-left px-3.5 py-3 rounded-2xl font-bold text-xs bg-primary text-white flex items-center justify-between transition-all shadow-md';
+                const iconCheck = document.createElement('i');
+                iconCheck.setAttribute('data-lucide', 'check');
+                iconCheck.className = 'w-4 h-4 shrink-0';
+                btn.appendChild(iconCheck);
+                lucide.createIcons({ root: btn });
+
+                const catId = btn.getAttribute('data-cat');
+                window.SAMGPChatbot.setActiveCategory(catId);
+            });
+
+            // 6. Botones de Acción Superior (Reiniciar, Ajustes, Exportar)
+            btnClearChat.addEventListener('click', () => {
+                if (confirm('¿Deseas limpiar el historial de conversaciones anteriores con el Asistente SAMGP?')) {
+                    window.SAMGPChatbot.clearHistory();
+                    renderFullHistory();
+                }
+            });
+
+            function syncSettingsUI() {
+                toggleLiveLLM.checked = window.SAMGPChatbot.settings.useLiveLLM;
+                inputApiKey.value = window.SAMGPChatbot.settings.geminiApiKey || '';
+            }
+
+            btnOpenSettings.addEventListener('click', () => {
+                syncSettingsUI();
+                settingsModal.classList.remove('hidden');
+            });
+
+            document.querySelectorAll('.btn-close-modal').forEach(b => {
+                b.addEventListener('click', () => settingsModal.classList.add('hidden'));
+            });
+
+            btnSaveSettings.addEventListener('click', () => {
+                window.SAMGPChatbot.saveSettings({
+                    useLiveLLM: toggleLiveLLM.checked,
+                    geminiApiKey: inputApiKey.value.trim()
+                });
+                settingsModal.classList.add('hidden');
+                alert('✅ Configuración del Motor IA guardada correctamente en LocalStorage.');
+            });
+
+            // 7. Modal de Exportación
+            btnExportChat.addEventListener('click', () => {
+                const textExport = window.SAMGPChatbot.exportChatAsText();
+                document.getElementById('export-textarea').value = textExport;
+                exportModal.classList.remove('hidden');
+            });
+
+            document.querySelectorAll('.btn-close-export').forEach(b => {
+                b.addEventListener('click', () => exportModal.classList.add('hidden'));
+            });
+
+            document.getElementById('btn-copy-export').addEventListener('click', () => {
+                const text = document.getElementById('export-textarea').value;
+                navigator.clipboard.writeText(text);
+                document.getElementById('export-status').textContent = '✅ Copiado al portapapeles exitosamente.';
+                setTimeout(() => { document.getElementById('export-status').textContent = 'Listo para copiar o descargar.'; }, 3000);
+            });
+
+            document.getElementById('btn-download-export').addEventListener('click', () => {
+                const text = document.getElementById('export-textarea').value;
+                const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `Consulta_SAMGP_${new Date().toISOString().slice(0,10)}.txt`;
+                a.click();
+                URL.revokeObjectURL(url);
+            });
+
+            // 8. Reconocimiento de Voz (Web Speech API si está disponible en navegador)
+            const btnVoice = document.getElementById('btn-voice');
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (SpeechRecognition) {
+                const recognition = new SpeechRecognition();
+                recognition.lang = 'es-PE';
+                recognition.continuous = false;
+                
+                btnVoice.addEventListener('click', () => {
+                    btnVoice.classList.add('text-red-600', 'animate-pulse');
+                    recognition.start();
+                });
+
+                recognition.onresult = (event) => {
+                    const transcript = event.results[0][0].transcript;
+                    chatInput.value = transcript;
+                    btnVoice.classList.remove('text-red-600', 'animate-pulse');
+                    chatForm.dispatchEvent(new Event('submit'));
+                };
+
+                recognition.onerror = () => {
+                    btnVoice.classList.remove('text-red-600', 'animate-pulse');
+                };
+                recognition.onend = () => {
+                    btnVoice.classList.remove('text-red-600', 'animate-pulse');
+                };
+            } else {
+                btnVoice.addEventListener('click', () => {
+                    alert('🎤 El reconocimiento de voz por dictado requiere un navegador compatible (como Chrome o Edge).');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
