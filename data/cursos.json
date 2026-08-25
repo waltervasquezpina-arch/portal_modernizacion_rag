@@ -1,0 +1,265 @@
+{
+  "modulos": [
+    {
+      "id": "modulo1",
+      "titulo": "Implementación de Gestión por Procesos",
+      "eje": "EJE A",
+      "descripcion": "Diseño Transversal de Flujos de Valor",
+      "subtemas": [
+        {
+          "id": "A.1",
+          "titulo": "Conceptos Fundamentales y el Ciclo de la Gestión por Procesos",
+          "descripcion": "Introducción amigable a los conceptos clave de la NT N° 002-2025-PCM/SGP.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "¿Cuál es la norma técnica principal que rige la Gestión por Procesos?",
+              "opciones": ["NT N° 001-2025-PCM", "NT N° 002-2025-PCM/SGP", "NT N° 003-2025-PCM"],
+              "respuestaCorrecta": 1
+            },
+            {
+              "pregunta": "¿Cuál es el propósito central de aplicar Gestión por Procesos en la entidad?",
+              "opciones": ["Generar mayor valor público y satisfacción en los usuarios", "Reducir drásticamente el personal", "Solo cumplir con una directiva sin medir impacto"],
+              "respuestaCorrecta": 0
+            }
+          ]
+        },
+        {
+          "id": "A.2",
+          "titulo": "Interpretación del Mapa de Procesos Nivel 0 de AGROIDEAS",
+          "descripcion": "Análisis de la arquitectura general aprobada mediante RDE.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "¿Qué tipos de macroprocesos estructuran el Mapa de Procesos Nivel 0?",
+              "opciones": ["Administrativos, Legales y Financieros", "Estratégicos, Misionales y de Soporte/Apoyo", "Primarios y Secundarios"],
+              "respuestaCorrecta": 1
+            }
+          ]
+        },
+        {
+          "id": "A.3",
+          "titulo": "Metodología para el Llenado de la Ficha de Producto y Proceso (FPP)",
+          "descripcion": "Estructura obligatoria según el Anexo 7 de la NT.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "¿Qué anexo de la norma técnica corresponde a la Ficha de Producto y Proceso (FPP)?",
+              "opciones": ["Anexo 2", "Anexo 5", "Anexo 7"],
+              "respuestaCorrecta": 2
+            },
+            {
+              "pregunta": "La Ficha de Producto y Proceso (FPP) busca estandarizar principalmente:",
+              "opciones": ["Las actividades, indicadores y elementos de entrada/salida de un proceso", "El organigrama de la institución", "El control de asistencia de los trabajadores"],
+              "respuestaCorrecta": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modulo2",
+      "titulo": "Implementación de Gestión del Conocimiento",
+      "eje": "EJE B",
+      "descripcion": "Resguardo del Capital Intelectual",
+      "subtemas": [
+        {
+          "id": "B.1",
+          "titulo": "Introducción a la GC y la Técnica 5W+2H",
+          "descripcion": "El Ciclo del Conocimiento y la herramienta 5W+2H.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "¿Para qué sirve principalmente la técnica 5W+2H en la Gestión del Conocimiento?",
+              "opciones": ["Para despedir personal ineficiente", "Para estructurar y documentar el conocimiento de forma ordenada y completa", "Para gestionar el presupuesto anual"],
+              "respuestaCorrecta": 1
+            }
+          ]
+        },
+        {
+          "id": "B.2",
+          "titulo": "Cultura de Mejora: Las Fichas de Lecciones Aprendidas",
+          "descripcion": "Transformar experiencias de campo en activos preventivos.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "¿Cuál es el valor real de documentar una 'Lección Aprendida'?",
+              "opciones": ["Evitar cometer los mismos errores y replicar los casos de éxito", "Buscar responsables para aplicar sanciones", "Cumplir con un formato obligatorio sin usarlo"],
+              "respuestaCorrecta": 0
+            }
+          ]
+        },
+        {
+          "id": "B.3",
+          "titulo": "Protección de la Memoria: El Offboarding",
+          "descripcion": "Protocolo de 'Entrega de Conocimiento' al cesar o rotar de puesto.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "El Offboarding enfocado en la GC tiene como objetivo principal:",
+              "opciones": ["Entregar el fotocheck y la laptop institucional", "Retener el capital intelectual y asegurar la continuidad operativa antes de la salida del colaborador", "Firmar la liquidación de beneficios"],
+              "respuestaCorrecta": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modulo3",
+      "titulo": "Implementación de Gestión de Innovación",
+      "eje": "EJE C",
+      "descripcion": "Prototipado e Iteración Ágil",
+      "subtemas": [
+        {
+          "id": "C.1",
+          "titulo": "Formulación de la Ficha FIIP",
+          "descripcion": "Criterios normativos para el llenado del Anexo 1.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "¿Qué siglas corresponden a la Ficha empleada para presentar proyectos de innovación?",
+              "opciones": ["FIIP", "FPP", "FDI"],
+              "respuestaCorrecta": 0
+            }
+          ]
+        },
+        {
+          "id": "C.2",
+          "titulo": "El Modelo Doble Diamante Aplicado a AGROIDEAS",
+          "descripcion": "Flujo metodológico: Descubrir, Idear, Definir, Entregar.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "¿Cuáles son las fases principales de la metodología del Doble Diamante?",
+              "opciones": ["Planificar, Hacer, Verificar, Actuar", "Descubrir, Definir, Desarrollar (Idear), y Entregar", "Inicio, Planificación, Ejecución, Cierre"],
+              "respuestaCorrecta": 1
+            },
+            {
+              "pregunta": "El Modelo Doble Diamante fomenta el pensamiento:",
+              "opciones": ["Lineal y estricto", "Divergente y Convergente", "Exclusivamente técnico"],
+              "respuestaCorrecta": 1
+            }
+          ]
+        },
+        {
+          "id": "C.3",
+          "titulo": "Diseño de PMV en Espacios Seguros",
+          "descripcion": "Concepto de experimentación ágil y controlada.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "¿Qué significa PMV en el contexto de innovación ágil?",
+              "opciones": ["Proceso Máximo Validado", "Producto Mínimo Viable", "Plan Maestro de Valor"],
+              "respuestaCorrecta": 1
+            },
+            {
+              "pregunta": "Un entorno de 'Espacio Seguro' para prototipar permite:",
+              "opciones": ["Experimentar y fallar rápido a bajo costo sin afectar el servicio principal", "Evitar cualquier tipo de innovación por riesgo a fallar", "Implementar la solución final inmediatamente en toda la entidad"],
+              "respuestaCorrecta": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modulo4",
+      "titulo": "Calidad de Servicios",
+      "eje": "EJE D",
+      "descripcion": "Pertinencia Territorial y Uso de TICs",
+      "subtemas": [
+        {
+          "id": "D.1",
+          "titulo": "Criterios de Verificación de Campo para Elegibilidad",
+          "descripcion": "Estandarización de las directivas institucionales de evaluación.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "La verificación de campo busca garantizar:",
+              "opciones": ["Que el personal tenga viáticos asignados", "La elegibilidad basada en criterios técnicos y estandarizados", "Que se aprueben los proyectos sin evaluación previa"],
+              "respuestaCorrecta": 1
+            }
+          ]
+        },
+        {
+          "id": "D.2",
+          "titulo": "Herramientas Tecnológicas y Seguridad de Información",
+          "descripcion": "Uso práctico de aplicativos móviles institucionales.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "Al usar aplicativos móviles institucionales en campo, es fundamental:",
+              "opciones": ["Compartir las credenciales de acceso con terceros", "Asegurar la veracidad y protección de la información recopilada", "Usar dispositivos personales sin medidas de seguridad"],
+              "respuestaCorrecta": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modulo5",
+      "titulo": "Uso de herramientas de IA",
+      "eje": "EJE E",
+      "descripcion": "Inteligencia Artificial en AGROIDEAS",
+      "subtemas": [
+        {
+          "id": "E.1",
+          "titulo": "Fundamentos de IA y 'Grounding' Normativo",
+          "descripcion": "Anclaje documental para eliminar alucinaciones.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "¿A qué se refiere el término 'Grounding' en el uso de Inteligencia Artificial para el Estado?",
+              "opciones": ["A apagar la Inteligencia Artificial", "Al anclaje de la IA a documentos normativos reales para evitar que invente información (alucinaciones)", "A conectar la computadora a un pozo a tierra"],
+              "respuestaCorrecta": 1
+            }
+          ]
+        },
+        {
+          "id": "E.2",
+          "titulo": "Asistencia Inteligente y Prompting",
+          "descripcion": "Técnicas de formulación de instrucciones.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "¿Qué es un 'Prompt' en el contexto de Asistencia Inteligente?",
+              "opciones": ["Un error del sistema operativo", "Una instrucción clara, contexto y objetivo que se le da a la IA para obtener un buen resultado", "Un tipo de archivo de base de datos"],
+              "respuestaCorrecta": 1
+            },
+            {
+              "pregunta": "Para mejorar la respuesta de la IA, el 'prompt' debe:",
+              "opciones": ["Ser muy genérico (ej. 'ayúdame')", "Asignarle un rol, dar contexto y detallar el formato de salida deseado", "Contener información confidencial del usuario"],
+              "respuestaCorrecta": 1
+            }
+          ]
+        },
+        {
+          "id": "E.3",
+          "titulo": "Prototipado Agéntico y Automatización",
+          "descripcion": "Introducción al Ecosistema SIPA.",
+          "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "pdf_url": "#",
+          "preguntas": [
+            {
+              "pregunta": "El uso de agentes y automatización en la gestión pública permite:",
+              "opciones": ["Aumentar la carga de trabajo repetitiva", "Reemplazar completamente el juicio profesional humano", "Optimizar tiempos y reducir errores en procesos repetitivos, liberando tiempo para análisis estratégico"],
+              "respuestaCorrecta": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

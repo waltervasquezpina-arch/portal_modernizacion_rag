@@ -1,0 +1,440 @@
+{
+    "metadata": {
+        "title": "Corpus Normativo del Sistema Administrativo de Modernización de la Gestión Pública (SAMGP) al 2030",
+        "version": "2026.6",
+        "last_updated": "2026-07-18",
+        "total_modules": 9
+    },
+    "categories": [
+        { "id": "all", "name": "Todos los Temas", "icon": "layers" },
+        { "id": "marco_modernizacion", "name": "0. Marco General y Ley 27658", "icon": "scale" },
+        { "id": "politica_2030", "name": "1. Política Nacional (PNMGP 2030)", "icon": "compass" },
+        { "id": "reglamento_samgp", "name": "2. Reglamento del SAMGP", "icon": "book-open" },
+        { "id": "gestion_procesos", "name": "3. Gestión por Procesos (GxP)", "icon": "settings-2" },
+        { "id": "gestion_calidad", "name": "4. Calidad de Servicios (GCS)", "icon": "award" },
+        { "id": "gestion_conocimiento", "name": "5. Gestión del Conocimiento", "icon": "brain" },
+        { "id": "innovacion_publica", "name": "6. Innovación Pública", "icon": "lightbulb" },
+        { "id": "organizacion_estado", "name": "7. Organización del Estado", "icon": "building-2" },
+        { "id": "instructivos_agroideas", "name": "8. Instructivos Operativos", "icon": "file-text" }
+    ],
+    "knowledge_nodes": [
+        {
+            "id": "node_001",
+            "category": "marco_modernizacion",
+            "title": "Finalidad de la Modernización de la Gestión Pública y Valor Público",
+            "source": "Ley N° 27658, Artículo 4 y Decreto Supremo N° 030-2002-PCM",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/0. MARCO MODERNIZACION DE LA GESTION PUBLICA/LEY N°27658.pdf",
+            "keywords": [
+                "ley 27658", "ley marco", "finalidad", "valor publico", "que es la modernizacion", "objetivo de la ley 27658", "para que sirve la modernizacion", "proceso de modernizacion", "al servicio del ciudadano"
+            ],
+            "question_patterns": [
+                "¿Cuál es la finalidad de la Ley N° 27658?",
+                "¿Qué es la modernización de la gestión del Estado?",
+                "¿Qué es el valor público según la Ley 27658?",
+                "¿Cuál es el objetivo primordial del proceso de modernización?"
+            ],
+            "answer": "<p>Según la <strong>Ley N° 27658 (Ley Marco de Modernización de la Gestión del Estado)</strong>, el proceso de modernización tiene como finalidad fundamental la obtención de mayores niveles de eficiencia del aparato estatal, de manera que se logre una mejor atención a la ciudadanía, priorizando y optimizando el uso de los recursos públicos.</p><p><strong>Principales objetivos y criterios:</strong></p><ul class='list-disc pl-5 mt-2 space-y-1.5'><li><strong>Al servicio del ciudadano:</strong> Todas las entidades públicas deben estructurar sus funciones y procesos enfocándose en satisfacer las necesidades reales y expectativas de las personas.</li><li><strong>Canales eficientes y transparentes:</strong> Simplificación de trámites y rendición permanente de cuentas sobre la gestión de recursos.</li><li><strong>Generación de Valor Público:</strong> Es el resultado que las entidades públicas generan al dar respuesta efectiva y de calidad a los problemas de la sociedad, mejorando el bienestar de la población.</li></ul>",
+            "quick_prompt": "¿Cuál es la finalidad de la Ley N° 27658?"
+        },
+        {
+            "id": "node_002",
+            "category": "politica_2030",
+            "title": "Objetivos Prioritarios de la Política Nacional de Modernización al 2030",
+            "source": "Decreto Supremo N° 103-2022-PCM - PNMGP al 2030",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/1 POLITICA NACIONAL DE MODERNIZACIÓN/PNM_3 - POL NAC DE MODERN DE LA GP 2030.pdf",
+            "keywords": [
+                "pnmgp 2030", "objetivos prioritarios", "4 objetivos", "politica nacional", "ds 103-2022-pcm", "cual es la politica nacional al 2030", "objetivos al 2030", "op1", "op2", "op3", "op4"
+            ],
+            "question_patterns": [
+                "¿Cuáles son los objetivos prioritarios de la Política Nacional de Modernización al 2030?",
+                "¿Cuántos objetivos tiene la PNMGP al 2030?",
+                "¿Qué establece el Decreto Supremo N° 103-2022-PCM?",
+                "¿Cuáles son los 4 pilares u objetivos al 2030?"
+            ],
+            "answer": "<p>La <strong>Política Nacional de Modernización de la Gestión Pública al 2030 (PNMGP)</strong>, aprobada mediante el <strong>Decreto Supremo N° 103-2022-PCM</strong>, orienta las acciones del Estado bajo el principio de que las personas están en el centro de las intervenciones públicas. Define <strong>4 Objetivos Prioritarios (OP)</strong> interconectados:</p><ul class='list-disc pl-5 mt-2 space-y-2'><li><strong>OP 1: Políticas públicas que responden a las necesidades de las personas.</strong> Garantiza intervenciones públicas diseñadas con base en evidencia y adaptadas a las realidades y particularidades territoriales.</li><li><strong>OP 2: Gestión interna de las entidades basada en procesos eficientes.</strong> Optimiza las operaciones de soporte y misionales para eliminar burocracia innecesaria y lograr alta productividad en las entidades públicas.</li><li><strong>OP 3: Servicios públicos de calidad orientados al ciudadano.</strong> Asegura que las prestaciones gubernamentales cumplan estándares de oportunidad, accesibilidad, empatía y efectividad.</li><li><strong>OP 4: Estado abierto, transparente e innovador.</strong> Promueve la participación ciudadana, la rendición de cuentas, el gobierno digital y la co-creación de soluciones (innovación pública).</li></ul>",
+            "quick_prompt": "¿Cuáles son los 4 objetivos prioritarios de la PNMGP al 2030?"
+        },
+        {
+            "id": "node_003",
+            "category": "politica_2030",
+            "title": "Enfoques Transversales de la PNMGP al 2030",
+            "source": "PNMGP al 2030 (DS N° 103-2022-PCM), Sección de Enfoques",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/1 POLITICA NACIONAL DE MODERNIZACIÓN/PNM_5 - Version-amigable-de-la-pnmgp.pdf",
+            "keywords": [
+                "enfoques", "enfoques transversales", "territorial", "gobernanza", "gobierno abierto", "poblacion vulnerable", "interculturalidad"
+            ],
+            "question_patterns": [
+                "¿Cuáles son los enfoques transversales de la Política al 2030?",
+                "¿Qué enfoques guían la modernización de la gestión pública?",
+                "¿En qué consiste el enfoque territorial y de gobierno abierto?"
+            ],
+            "answer": "<p>La PNMGP al 2030 incorpora <strong>enfoques transversales</strong> esenciales para asegurar una transformación inclusiva y sostenible en todas las entidades de la administración pública:</p><ul class='list-disc pl-5 mt-2 space-y-1.5'><li><strong>Enfoque Territorial:</strong> Considera la diversidad geográfica, cultural, socioeconómica y ambiental del Perú, adaptando la gestión y los servicios a las realidades de cada región, provincia y distrito.</li><li><strong>Enfoque de Gobierno Abierto y Gobernanza Pública:</strong> Promueve la transparencia, la integridad pública, la colaboración interinstitucional y el diálogo continuo con actores privados, academia y sociedad civil.</li><li><strong>Enfoque de Derechos Humanos e Inclusión:</strong> Garantiza que la modernización elimine barreras y brechas de desigualdad para poblaciones en situación de vulnerabilidad o exclusión (interculturalidad, género, discapacidad).</li></ul>",
+            "quick_prompt": "¿Cuáles son los enfoques transversales de la PNMGP al 2030?"
+        },
+        {
+            "id": "node_004",
+            "category": "reglamento_samgp",
+            "title": "Reglamento del Sistema Administrativo de Modernización de la Gestión Pública (SAMGP)",
+            "source": "Decreto Supremo N° 123-2018-PCM",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/2. REGLAMENTO SAMGP/R_SAMGP_DS_N__123-2018-PCM Reglamento SAMGP.pdf",
+            "keywords": [
+                "reglamento samgp", "ds 123-2018-pcm", "sistema administrativo", "ente rector", "secretaria de gestion publica", "sgp", "que es el samgp", "materias del sistema"
+            ],
+            "question_patterns": [
+                "¿Qué establece el Reglamento del SAMGP (DS 123-2018-PCM)?",
+                "¿Cuál es el rol de la Secretaría de Gestión Pública (SGP)?",
+                "¿Cuáles son las materias del Sistema Administrativo de Modernización?",
+                "¿Qué es el SAMGP y quién es su ente rector?"
+            ],
+            "answer": "<p>El <strong>Decreto Supremo N° 123-2018-PCM</strong> aprueba el Reglamento del Sistema Administrativo de Modernización de la Gestión Pública (SAMGP). Este sistema es el conjunto de principios, normas, métodos y procedimientos que ordenan las actividades de modernización en todo el aparato estatal.</p><p><strong>Ente Rector y Ámbito de Competencia:</strong></p><ul class='list-disc pl-5 mt-2 space-y-1.5'><li><strong>Ente Rector:</strong> La <strong>Secretaría de Gestión Pública (SGP)</strong> de la Presidencia del Consejo de Ministros (PCM) ejerce la rectoría técnico-normativa del SAMGP a nivel nacional.</li><li><strong>Ámbito de Aplicación:</strong> Obligatorio para todos los poderes del Estado, ministerios, organismos públicos, gobiernos regionales y gobiernos locales.</li><li><strong>Materias que comprende el SAMGP:</strong><br>1. Estructura, organización y funcionamiento del Estado.<br>2. Gestión por Procesos.<br>3. Simplificación Administrativa y Calidad de Servicios.<br>4. Gestión del Conocimiento.<br>5. Innovación Pública y Gobierno Digital (articulado con Marcol).</li></ul>",
+            "quick_prompt": "¿Qué establece el Reglamento del SAMGP (DS N° 123-2018-PCM)?"
+        },
+        {
+            "id": "node_005",
+            "category": "gestion_procesos",
+            "title": "Norma Técnica N° 002-2025-PCM/SGP para la Gestión por Procesos en las Entidades Públicas",
+            "source": "Resolución de Secretaría de Gestión Pública N° 009-2025-PCM/SGP y NT N° 002-2025",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/3. NT GESTIÓN POR PROCESOS/GxP_3 - NT-N-002-2025-pcm-sgp-f-f.pdf",
+            "keywords": [
+                "gestion por procesos", "nt 002-2025", "rsgp 009-2025", "gxp", "que es gestion por procesos", "procesos estrategicos", "procesos operativos", "procesos de soporte", "mapa de procesos", "guia practica"
+            ],
+            "question_patterns": [
+                "¿De qué trata la Norma Técnica N° 002-2025-PCM/SGP de Gestión por Procesos?",
+                "¿Qué es la Gestión por Procesos en el Estado según la nueva norma 2025?",
+                "¿Cómo se clasifican los procesos en una entidad pública según la NT 002-2025?",
+                "¿Cuáles son las fases de implementación de la Gestión por Procesos?"
+            ],
+            "answer": "<p>La <strong>Norma Técnica N° 002-2025-PCM/SGP</strong> (aprobada con <strong>RSGP N° 009-2025-PCM/SGP</strong>) establece las directrices e instrumentos obligatorios para que las entidades públicas gestionen sus actividades de manera transversal, sistémica y orientada a resultados.</p><p><strong>Clasificación del Mapa de Procesos:</strong></p><ul class='list-disc pl-5 mt-2 space-y-1.5'><li><strong>Procesos Estratégicos (Nivel 0):</strong> Definen directrices, políticas, planificación, control gerencial y auditoría de la entidad (dueño: Alta Dirección).</li><li><strong>Procesos Operativos o Misionales (Nivel 0):</strong> Transforman insumos en bienes y servicios directos para el ciudadano; constituyen la razón de ser (core) institucional.</li><li><strong>Procesos de Soporte o Apoyo (Nivel 0):</strong> Proveen recursos técnicos, tecnológicos, humanos, financieros y logísticos para que operen los demás procesos.</li></ul><p><strong>Fases del Ciclo de Gestión por Procesos:</strong><br>1. <em>Determinación de Procesos:</em> Identificación y elaboración de fichas y diagramas.<br>2. <em>Seguimiento y Medición:</em> Control mediante indicadores de desempeño.<br>3. <em>Mejora Continua:</em> Optimización y eliminación de cuellos de botella.</p>",
+            "quick_prompt": "¿Cómo se clasifican los procesos según la NT N° 002-2025-PCM/SGP?"
+        },
+        {
+            "id": "node_006",
+            "category": "gestion_calidad",
+            "title": "Norma Técnica de Gestión de la Calidad de Servicios en el Sector Público",
+            "source": "Norma Técnica de Gestión de Calidad (GCS) y Anexos",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/4. NT GESTION DE CALIDAD DE SERVICIOS/GCS_Norma Tecnica - GCS.pdf",
+            "keywords": [
+                "calidad de servicios", "gcs", "norma tecnica de calidad", "satisfaccion ciudadana", "estandares de calidad", "encuestas de satisfaccion", "calidad en el servicio publico", "experiencia del ciudadano"
+            ],
+            "question_patterns": [
+                "¿En qué consiste la Gestión de Calidad de Servicios (GCS) en el Estado?",
+                "¿Cuáles son los componentes de la Norma Técnica de Gestión de Calidad?",
+                "¿Cómo se mide la satisfacción de los ciudadanos según la norma técnica GCS?"
+            ],
+            "answer": "<p>La <strong>Norma Técnica de Gestión de Calidad de Servicios (GCS)</strong> regula de manera estructurada el conjunto de acciones sistemáticas necesarias para asegurar que los servicios públicos satisfagan plenamente las expectativas, derechos y necesidades de los ciudadanos.</p><p><strong>Ejes Fundamentales de la GCS:</strong></p><ul class='list-disc pl-5 mt-2 space-y-1.5'><li><strong>Estandarización de Canales:</strong> Definición precisa de protocolos para atención presencial, telefónica, virtual y plataformas web multiusuario.</li><li><strong>Medición de la Satisfacción Ciudadana:</strong> Aplicación periódica y estandarizada de herramientas de retroalimentación (encuestas, focus groups, buzones de escucha activa) utilizando índices estandarizados.</li><li><strong>Gestión de Reclamos y Mejora:</strong> Tratamiento riguroso del feedback para subsanar fallas operativas y rediseñar los puntos de contacto con el ciudadano.</li></ul>",
+            "quick_prompt": "¿En qué consiste la Gestión de Calidad de Servicios (GCS) en el Estado?"
+        },
+        {
+            "id": "node_007",
+            "category": "gestion_conocimiento",
+            "title": "Norma Técnica para la Gestión del Conocimiento en Entidades Públicas (RSGP N° 001-2025)",
+            "source": "Resolución de Secretaría de Gestión Pública N° 001-2025-PCM/SGP",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/5. NT GESTION DEL CONOCIMIENTO/BL_GC-norma-tecnica-para-la-gestion-del-conocimiento-21-02-25-f-f.pdf",
+            "keywords": [
+                "gestion del conocimiento", "nt gestion del conocimiento", "rsgp 001-2025", "capital intelectual", "fuga de conocimiento", "buenas practicas", "fases de gestion del conocimiento", "transferencia de conocimiento"
+            ],
+            "question_patterns": [
+                "¿Qué establece la Norma Técnica de Gestión del Conocimiento (RSGP N° 001-2025)?",
+                "¿Cuáles son las fases de la Gestión del Conocimiento en entidades públicas?",
+                "¿Por qué es clave la Gestión del Conocimiento para evitar la pérdida del saber institucional?"
+            ],
+            "answer": "<p>Aprobada con la <strong>RSGP N° 001-2025-PCM/SGP</strong> (febrero de 2025), esta Norma Técnica regula el proceso sistemático de capturar, preservar, compartir y utilizar el conocimiento institucional (tanto explícito en documentos como tácito en la experiencia de los servidores públicos) para transformarlo en un activo estratégico.</p><p><strong>Las 4 Fases de la Gestión del Conocimiento:</strong></p><ol class='list-decimal pl-5 mt-2 space-y-1.5'><li><strong>Identificación:</strong> Mapeo exhaustivo del conocimiento crítico, expertos clave y vacíos de información en los procesos de la entidad.</li><li><strong>Captura y Creación:</strong> Sistematización de lecciones aprendidas, memorias institucionales, documentación técnica y manuales operativos.</li><li><strong>Organización y Almacenamiento:</strong> Estructuración en repositorios institucionales digitales centralizados de fácil búsqueda (como el actual Portal de Modernización).</li><li><strong>Transferencia y Difusión:</strong> Mentorías intergeneracionales, comunidades de práctica y capacitaciones para mitigar el riesgo de pérdida de saber por rotación laboral.</li></ol>",
+            "quick_prompt": "¿Cuáles son las fases de la Gestión del Conocimiento (RSGP N° 001-2025)?"
+        },
+        {
+            "id": "node_008",
+            "category": "innovacion_publica",
+            "title": "Norma Técnica para la Innovación Pública en Entidades Públicas (RSGP N° 007-2025)",
+            "source": "Resolución de Secretaría de Gestión Pública N° 007-2025-PCM/SGP",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/6. NT GESTION INNOVACIÓN PUBLICA/GIP_NT-GIP-rsgp-007-2025-pcm-sgp.pdf",
+            "keywords": [
+                "innovacion publica", "nt innovacion publica", "rsgp 007-2025", "co-creacion", "laboratorios de innovacion", "soluciones creativas", "pilotaje", "design thinking en el estado"
+            ],
+            "question_patterns": [
+                "¿De qué trata la Norma Técnica de Innovación Pública (RSGP N° 007-2025-PCM/SGP)?",
+                "¿Cómo se define el proceso de innovación en el Estado peruano?",
+                "¿Cuáles son las etapas del ciclo de innovación pública según la norma técnica?"
+            ],
+            "answer": "<p>La <strong>Norma Técnica para la Innovación Pública</strong> (aprobada mediante <strong>RSGP N° 007-2025-PCM/SGP</strong>) establece pautas para fomentar una cultura experimental, ágil y colaborativa que permita desarrollar soluciones creativas a problemas públicos complejos con alto impacto en el ciudadano.</p><p><strong>Etapas del Ciclo de Innovación Pública:</strong></p><ul class='list-disc pl-5 mt-2 space-y-1.5'><li><strong>Empatía y Definición del Problema:</strong> Investigación directa y profunda con el usuario/ciudadano para comprender el verdadero dolor o cuello de botella.</li><li><strong>Ideación y Co-creación:</strong> Sesiones multidisciplinarias con servidores y ciudadanos para generar propuestas innovadoras viables.</li><li><strong>Prototipado y Pilotaje en Entornos Seguros:</strong> Construcción ágil de modelos de prueba y experimentación controlada para validar su eficacia antes de un despliegue masivo.</li><li><strong>Escalamiento e Institutionalización:</strong> Incorporación de la innovación probada dentro de las directivas y procesos formales de la entidad.</li></ul>",
+            "quick_prompt": "¿Qué establece la Norma Técnica de Innovación Pública (RSGP N° 007-2025)?"
+        },
+        {
+            "id": "node_009",
+            "category": "organizacion_estado",
+            "title": "Lineamientos de Organización del Estado: ROF, MOP y Ley Orgánica del Poder Ejecutivo",
+            "source": "Ley N° 29158 y Lineamientos SGP N° 02-2020 (DS N° 054-2018-PCM)",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/7. Normativo Organizacion Estado/Lineamientos 02-2020-SGP ROF-MOP - RSGP N° 005-2020.pdf",
+            "keywords": [
+                "organizacion del estado", "ley 29158", "lope", "ds 054-2018-pcm", "lineamientos 02-2020", "rof", "mop", "reglamento de organizacion y funciones", "manual de operaciones", "estructura organica"
+            ],
+            "question_patterns": [
+                "¿Qué regulan los Lineamientos de Organización del Estado (ROF y MOP)?",
+                "¿Cuál es la diferencia entre un ROF y un MOP en las entidades públicas?",
+                "¿Qué establece la Ley N° 29158 (LOPE) y el DS N° 054-2018-PCM sobre diseño organizacional?"
+            ],
+            "answer": "<p>El diseño organizacional del Estado se rige por la <strong>Ley N° 29158 (Ley Orgánica del Poder Ejecutivo - LOPE)</strong> y los <strong>Lineamientos de Organización del Estado (DS N° 054-2018-PCM y RSGP N° 005-2020-PCM/SGP)</strong>, los cuales evitan la duplicidad de funciones y garantizan coherencia funcional.</p><p><strong>Instrumentos Básicos de Estructuración:</strong></p><ul class='list-disc pl-5 mt-2 space-y-1.5'><li><strong>Reglamento de Organización y Funciones (ROF):</strong> Documento técnico normativo de gestión institucional que formaliza la estructura orgánica, funciones generales, unidades de organización y relaciones de coordinación hasta el tercer nivel organizacional.</li><li><strong>Manual de Operaciones (MOP):</strong> Documento normativo que regula la organización y funcionamiento de Programas (como AGROIDEAS), Proyectos Especiales y unidades desconcentradas, especificando procesos, subprocesos y responsabilidades operativas.</li></ul>",
+            "quick_prompt": "¿Cuál es la diferencia entre el ROF y el MOP según los lineamientos de organización?"
+        },
+        {
+            "id": "node_010",
+            "category": "marco_modernizacion",
+            "title": "Articulación de los Sistemas Administrativos con el SAMGP",
+            "source": "Reglamento del SAMGP (DS N° 123-2018-PCM) y Ley de Modernización",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/2. REGLAMENTO SAMGP/R_SAMGP_DS_N__123-2018-PCM Reglamento SAMGP.pdf",
+            "keywords": [
+                "sistemas administrativos", "articulacion", "planeamiento estrategico", "ceplan", "presupuesto publico", "mef", "recursos humanos", "servir", "control gubernamental", "samgp articulacion"
+            ],
+            "question_patterns": [
+                "¿Cómo se articula el SAMGP con los demás sistemas administrativos del Estado?",
+                "¿Cuál es la relación entre el Sistema de Modernización, Planeamiento (CEPLAN) y Presupuesto (MEF)?",
+                "¿Por qué la modernización es transversal a toda la gestión pública?"
+            ],
+            "answer": "<p>El <strong>Sistema Administrativo de Modernización de la Gestión Pública (SAMGP)</strong> no opera de manera aislada; actúa como un sistema integrador que articula las herramientas técnicas de los demás sistemas administrativos transversales:</p><ul class='list-disc pl-5 mt-2 space-y-1.5'><li><strong>Con Planeamiento Estratégico (SINAPLAN - CEPLAN):</strong> Los objetivos prioritarios y los procesos misionales deben estar perfectamente alineados con el Plan Estratégico Institucional (PEI) y el Plan Operativo Institucional (POI).</li><li><strong>Con Presupuesto Público (MEF):</strong> Los procesos mejorados y orientados a resultados fundamentan la asignación y ejecución del Presupuesto por Resultados (PpR).</li><li><strong>Con Gestión de Recursos Humanos (SERVIR):</strong> La optimización de procesos y el MOP determinan los perfiles de puestos, competencias y planes de desarrollo del personal.</li><li><strong>Con Gobierno Digital e Informática (SEGDI):</strong> La simplificación y digitalización se apalancan en la interoperabilidad y el gobierno de datos para servicios ciudadanos 100% en línea.</li></ul>",
+            "quick_prompt": "¿Cómo se articula el SAMGP con el Planeamiento (CEPLAN) y Presupuesto (MEF)?"
+        },
+        {
+            "id": "node_011",
+            "category": "instructivos_agroideas",
+            "title": "Instructivo de Asociatividad - General",
+            "source": "Instructivo de Asociatividad - AGROIDEAS",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/1. Instructivo Asociatividad/INSTRUCTIVO_ASOCIATIVIDAD.pdf",
+            "keywords": [
+                "asociatividad", "instructivo de asociatividad", "conformacion", "asociaciones", "agroideas asociatividad", "asociarse", "agruparse", "formar asociacion", "juntarse", "asocitividad", "asociativida", "asoziacion"
+            ],
+            "question_patterns": [
+                "¿Qué establece el Instructivo de Asociatividad?",
+                "¿De qué trata el instructivo de asociatividad?",
+                "¿Cómo me asocio en Agroideas?",
+                "¿Qué se necesita para armar una asociacion?"
+            ],
+            "answer": "<p>El <strong>Instructivo de Asociatividad</strong> establece las disposiciones y procedimientos operativos para que las organizaciones agrarias puedan acceder a los incentivos de AGROIDEAS mediante el fortalecimiento de sus bases asociativas.</p>",
+            "quick_prompt": "¿Qué establece el Instructivo de Asociatividad?"
+        },
+        {
+            "id": "node_011_a",
+            "category": "instructivos_agroideas",
+            "title": "Requisitos y Flujo de Asociatividad",
+            "source": "Instructivo de Asociatividad - Requisitos y Flujo",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/1. Instructivo Asociatividad/INSTRUCTIVO_ASOCIATIVIDAD.pdf",
+            "keywords": [
+                "requisitos de asociatividad", "flujo de asociatividad", "evaluacion", "idoneidad", "productores", "quien califica", "organizacion de productores", "reqisitos", "idoneida"
+            ],
+            "question_patterns": [
+                "¿Cuáles son los requisitos para la asociatividad en AGROIDEAS?",
+                "¿Cómo se evalúa la idoneidad de los productores en asociatividad?",
+                "¿Cuál es el flujo para postular a asociatividad?",
+                "¿Quiénes pueden postular a asociatividad?"
+            ],
+            "answer": "<p>Para acceder al incentivo de asociatividad, se evalúa la <strong>idoneidad de los productores</strong> (que sean pequeños o medianos agricultores familiares) y la formalización jurídica de la asociación. El flujo comprende la presentación del expediente de elegibilidad, la constatación de campo y la aprobación final por el comité técnico.</p>",
+            "quick_prompt": "¿Cuáles son los requisitos para asociatividad?"
+        },
+        {
+            "id": "node_011_b",
+            "category": "instructivos_agroideas",
+            "title": "Formatos y Anexos de Asociatividad",
+            "source": "Instructivo de Asociatividad - Anexos",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/1. Instructivo Asociatividad/ANEXO_INFORMATIVO.pdf",
+            "keywords": [
+                "anexos de asociatividad", "formatos de asociatividad", "anexo 1", "anexo 2", "anexo 3", "anexo 4", "padron de socios", "acta de asamblea", "anesos", "patron de socios"
+            ],
+            "question_patterns": [
+                "¿Cuáles son los anexos de asociatividad?",
+                "¿Qué formatos debo presentar para asociatividad en AGROIDEAS?",
+                "¿Qué papeles debo presentar para asociarme?",
+                "¿Qué formatos pide Agroideas para asociarse?"
+            ],
+            "answer": "<p>La postulación requiere la entrega de los siguientes anexos oficiales digitalizados:</p><ul class='list-disc pl-5 mt-2 space-y-1'><li><strong>Anexo 1:</strong> Solicitud de apoyo y declaración jurada.</li><li><strong>Anexo 2:</strong> Padrón oficial de socios activos de la organización agraria.</li><li><strong>Anexo 3:</strong> Acta de asamblea general aprobando la postulación.</li><li><strong>Anexo 4:</strong> Ficha técnica informativa de la organización.</li></ul>",
+            "quick_prompt": "¿Cuáles son los anexos de asociatividad?"
+        },
+        {
+            "id": "node_012",
+            "category": "instructivos_agroideas",
+            "title": "Instructivo para el Incentivo de Gestión Empresarial - General",
+            "source": "RDE N° 114-2026 - Gestión Empresarial",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/2. Instructivo Gestión Empresarial/RDE 114-2026/RDE_114_2026_INstructivo-para-incentivo-de-gestion-empresarial.pdf",
+            "keywords": [
+                "gestion empresarial", "instructivo de gestion empresarial", "rde 114-2026", "incentivo", "gerente", "administrador", "gestor", "gesion", "gention"
+            ],
+            "question_patterns": [
+                "¿De qué trata el Instructivo de Gestión Empresarial?",
+                "¿Qué establece la RDE 114-2026 sobre Gestión Empresarial?",
+                "¿Cómo funciona el incentivo de gerente?"
+            ],
+            "answer": "<p>Aprobado mediante la <strong>RDE N° 114-2026</strong>, este instructivo regula el otorgamiento del incentivo de <strong>Gestión Empresarial</strong>, cuyo fin es cofinanciar la contratación de gerentes o profesionales calificados para mejorar la administración y sostenibilidad de las organizaciones agrarias.</p>",
+            "quick_prompt": "¿De qué trata el Instructivo de Gestión Empresarial?"
+        },
+        {
+            "id": "node_012_a",
+            "category": "instructivos_agroideas",
+            "title": "Perfil y Requisitos del Gerente (Gestión Empresarial)",
+            "source": "RDE N° 114-2026 - Perfil Gerente",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/2. Instructivo Gestión Empresarial/RDE 114-2026/RDE_114_2026_INstructivo-para-incentivo-de-gestion-empresarial.pdf",
+            "keywords": [
+                "perfil del gerente", "requisitos del gerente", "experiencia gerente", "estudios del gerente", "contratacion gerente", "estudios", "cv", "reqisitos", "gerente"
+            ],
+            "question_patterns": [
+                "¿Qué requisitos debe cumplir el gerente en Gestión Empresarial?",
+                "¿Cuál es el perfil del gerente para AGROIDEAS?",
+                "¿Qué debe haber estudiado el gerente de Agroideas?"
+            ],
+            "answer": "<p>El gerente a contratar bajo el incentivo de Gestión Empresarial debe poseer título profesional (en administración, ingeniería agronómica, economía o afines), acreditar experiencia mínima en gestión de negocios agrícolas o proyectos de desarrollo rural, y no contar con antecedentes penales ni deudas pendientes con el Estado.</p>",
+            "quick_prompt": "¿Qué requisitos debe cumplir the gerente?"
+        },
+        {
+            "id": "node_012_b",
+            "category": "instructivos_agroideas",
+            "title": "Cofinanciamiento y Plazos (Gestión Empresarial)",
+            "source": "RDE N° 114-2026 - Montos y Plazos",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/2. Instructivo Gestión Empresarial/RDE 114-2026/RDE_114_2026_INstructivo-para-incentivo-de-gestion-empresarial.pdf",
+            "keywords": [
+                "cofinanciamiento gerente", "cuanto paga agroideas gerente", "plazos gerente", "sueldo gerente", "escala de pago gerente", "pagar gerente", "sueldo de gerente", "cuanto tiempo gerente", "cofinansiamiento", "escalonado"
+            ],
+            "question_patterns": [
+                "¿Cómo funciona el cofinanciamiento de Gestión Empresarial?",
+                "¿Cuánto aporta AGROIDEAS para el sueldo del gerente y por cuánto tiempo?",
+                "¿Agroideas paga el sueldo del gerente?",
+                "¿Cómo pido un gerente para mi asociacion?"
+            ],
+            "answer": "<p>El cofinanciamiento de la plaza de gerencia dura hasta un máximo de <strong>3 años (36 meses)</strong> y se otorga de forma degressiva:</p><ul class='list-disc pl-5 mt-2 space-y-1'><li><strong>Año 1:</strong> AGROIDEAS cofinancia hasta el 70% del sueldo (máximo mensual topado).</li><li><strong>Año 2:</strong> AGROIDEAS cofinancia hasta el 50%.</li><li><strong>Año 3:</strong> AGROIDEAS cofinancia hasta el 30%.</li></ul><p>La organización agraria debe asumir el porcentaje restante como contrapartida líquida.</p>",
+            "quick_prompt": "¿Cuánto aporta AGROIDEAS para el gerente?"
+        },
+        {
+            "id": "node_013",
+            "category": "instructivos_agroideas",
+            "title": "Instructivo para el Fortalecimiento de Formas Asociativas - General",
+            "source": "Instructivo Formas Asociativas",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/3. Instructivo Formas Asosiativas/Fortalecimiento_FA.pdf.pdf",
+            "keywords": [
+                "formas asociativas", "fortalecimiento", "instructivo de formas asociativas", "cooperativas", "redes comerciales", "fortalecer cooperativa", "asosiativas", "cooperatibas"
+            ],
+            "question_patterns": [
+                "¿Qué es el Instructivo de Formas Asociativas?",
+                "¿De qué trata el documento de Fortalecimiento de Formas Asociativas?",
+                "¿Cómo se fortalecen las cooperativas?"
+            ],
+            "answer": "<p>El <strong>Instructivo para el Fortalecimiento de Formas Asociativas</strong> define los lineamientos para apoyar la consolidación técnica, legal y comercial de cooperativas, comunidades y otras redes empresariales del sector agrario.</p>",
+            "quick_prompt": "¿De qué trata el Instructivo de Formas Asociativas?"
+        },
+        {
+            "id": "node_013_a",
+            "category": "instructivos_agroideas",
+            "title": "Requisitos y Diagnóstico Organizacional (Formas Asociativas)",
+            "source": "Instructivo Formas Asociativas - Requisitos",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/3. Instructivo Formas Asosiativas/Fortalecimiento_FA.pdf.pdf",
+            "keywords": [
+                "requisitos formas asociativas", "diagnostico organizacional", "evaluacion formas asociativas", "cooperativas agroideas", "diagnostico de la asociacion", "diagnostico", "reqisitos"
+            ],
+            "question_patterns": [
+                "¿Cuáles son los requisitos de Formas Asociativas?",
+                "¿Qué es el diagnóstico organizacional en Formas Asociativas?",
+                "¿Qué requisitos piden para fortalecer cooperativas?"
+            ],
+            "answer": "<p>Las cooperativas o asociaciones elegibles deben contar con personería jurídica activa y un padrón de socios formalizado. Antes del desembolso de los incentivos de fortalecimiento, AGROIDEAS exige la realización de un <strong>diagnóstico organizacional previo</strong> para identificar las brechas operativas y los puntos clave a optimizar.</p>",
+            "quick_prompt": "¿Cuáles son los requisitos de Formas Asociativas?"
+        },
+        {
+            "id": "node_014",
+            "category": "instructivos_agroideas",
+            "title": "Instructivo EEMRI (Estrategia de Emprendimiento de Mujeres) - General",
+            "source": "Instructivo EEMRI",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/4. Instructivo EEMRI/EMRI 2024/Directiva_EMRI_2024.pdf",
+            "keywords": [
+                "eemri", "mujeres rurales", "indigenas", "emprendimiento", "instructivo eemri", "mujeres", "emprendimiento femenino", "comunidades nativas", "oam", "emri", "eemry"
+            ],
+            "question_patterns": [
+                "¿Qué es el EEMRI y cuáles son sus lineamientos?",
+                "¿De qué trata el Instructivo EEMRI (Mujeres Rurales e Indígenas)?",
+                "¿Cómo postular al programa de mujeres de Agroideas?"
+            ],
+            "answer": "<p>El <strong>Instructivo de la Estrategia de Emprendimiento de Mujeres Rurales e Indígenas (EEMRI)</strong> regula el acceso a las subvenciones económicas destinadas exclusivamente a Organizaciones Agrarias de Mujeres (OAM).</p>",
+            "quick_prompt": "¿Qué es la Estrategia EEMRI para Mujeres Rurales?"
+        },
+        {
+            "id": "node_014_a",
+            "category": "instructivos_agroideas",
+            "title": "Elegibilidad de la OAM (Estrategia Mujeres - EEMRI)",
+            "source": "Instructivo EEMRI - Elegibilidad",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/4. Instructivo EEMRI/EMRI 2024/Directiva_EMRI_2024.pdf",
+            "keywords": [
+                "oam elegibilidad", "requisitos eemri", "porcentaje de mujeres", "junta directiva eemri", "organizacion de mujeres", "organizaciones de mujeres", "elejibilidad", "porcentajes"
+            ],
+            "question_patterns": [
+                "¿Qué requisitos debe cumplir una organización para calificar a EEMRI?",
+                "¿Qué es una OAM y cómo califica en AGROIDEAS?",
+                "¿Qué requisitos piden a las mujeres rurales?"
+            ],
+            "answer": "<p>Para calificar como una <strong>Organización Agraria de Mujeres (OAM)</strong> elegible para la estrategia EEMRI, la entidad debe estar conformada por un mínimo de <strong>70% de socias mujeres</strong> en su padrón general y contar con al menos una mujer ocupando un cargo directivo principal.</p>",
+            "quick_prompt": "¿Qué requisitos debe cumplir la OAM?"
+        },
+        {
+            "id": "node_014_b",
+            "category": "instructivos_agroideas",
+            "title": "Montos de Subvención y Cadenas Priorizadas (EEMRI)",
+            "source": "Instructivo EEMRI - Montos",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/4. Instructivo EEMRI/EMRI 2024/Directiva_EMRI_2024.pdf",
+            "keywords": [
+                "montos eemri", "financiamiento mujeres", "subvencion mujeres", "cuanto dinero eemri", "ideas de negocio mujeres", "bono mujeres", "subvencion mujer", "subvension", "indijenas"
+            ],
+            "question_patterns": [
+                "¿Cuánto es el monto máximo de subvención en EEMRI?",
+                "¿Qué ideas de negocio financia la estrategia de mujeres?",
+                "¿Cuánto dinero le dan a las organizaciones de mujeres?"
+            ],
+            "answer": "<p>La estrategia otorga subvenciones directas no reembolsables con topes anuales regulados por la UIT vigente. Se priorizan planes orientados a la transformación de materias primas, comercialización conjunta y adopción de tecnologías ecológicas en cadenas productivas agrícolas, pecuarias y forestales.</p>",
+            "quick_prompt": "¿Cuánto financia la estrategia EEMRI?"
+        },
+        {
+            "id": "node_015",
+            "category": "instructivos_agroideas",
+            "title": "Instructivo para la Adopción de Tecnología (PNT)",
+            "source": "RDE N° 260-2023 - Adopción de Tecnología",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/5. Instructivo para la Adopción de Tecnología/RDE 260-2023/4987670-instructivo-pnt.pdf",
+            "keywords": [
+                "adopcion de tecnologia", "tecnologia", "pnt", "rde 260-2023", "planes de negocio", "instructivo de adopcion de tecnologia", "cofinanciamiento de tecnologia", "maquinaria", "tractores", "comprar herramientas", "tecnoloiga", "tecnolgia"
+            ],
+            "question_patterns": [
+                "¿De qué trata el Instructivo para la Adopción de Tecnología?",
+                "¿Qué establece la RDE 260-2023 sobre el PNT?",
+                "¿Cómo postular a adopcion de tecnologia?"
+            ],
+            "answer": "<p>Aprobado mediante la <strong>RDE N° 260-2023</strong>, este documento normativo es el <strong>Instructivo para el Incentivo de Adopción de Tecnología (PNT)</strong>. Establece las reglas y criterios de evaluación para el cofinanciamiento de Planes de Negocio enfocados en innovación tecnológica.</p>",
+            "quick_prompt": "¿De qué trata el Instructivo de Adopción de Tecnología?"
+        },
+        {
+            "id": "node_015_a",
+            "category": "instructivos_agroideas",
+            "title": "Gastos Elegibles y No Elegibles (PNT)",
+            "source": "RDE N° 260-2023 - Gastos PNT",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/5. Instructivo para la Adopción de Tecnología/RDE 260-2023/4987670-instructivo-pnt.pdf",
+            "keywords": [
+                "gastos elegibles pnt", "gastos no elegibles pnt", "que se puede comprar pnt", "maquinaria pnt", "asistencia tecnica pnt", "bienes elegibles", "que no cubre", "gastos prohibidos", "no financia", "maquinara", "bienes"
+            ],
+            "question_patterns": [
+                "¿Cuáles son los gastos elegibles en Adopción de Tecnología (PNT)?",
+                "¿Qué no se puede cofinanciar en el PNT de AGROIDEAS?",
+                "¿Qué puedo comprar con el dinero de tecnologia?",
+                "¿Agroideas financia la compra de tractores?",
+                "¿Cuáles son los gastos que no cubre el PNT?"
+            ],
+            "answer": "<p>El cofinanciamiento del PNT distingue entre:</p><ul class='list-disc pl-5 mt-2 space-y-1.5'><li><strong>Gastos Elegibles:</strong> Compra de maquinaria agrícola, equipos de procesamiento, cámaras de frío, insumos productivos de inicio, certificaciones orgánicas y asistencia técnica especializada.</li><li><strong>Gastos NO Elegibles:</strong> Compra de tierras o predios, vehículos de transporte de pasajeros, pago de deudas financieras, impuestos, y gastos administrativos ordinarios de la asociación.</li></ul>",
+            "quick_prompt": "¿Cuáles son los gastos elegibles del PNT?"
+        },
+        {
+            "id": "node_015_b",
+            "category": "instructivos_agroideas",
+            "title": "Porcentajes de Cofinanciamiento PNT",
+            "source": "RDE N° 260-2023 - Financiamiento PNT",
+            "pdf_path": "MARCO NORMATIVO SAMGP 2026/8. Instructivos/5. Instructivo para la Adopción de Tecnología/RDE 260-2023/4987670-instructivo-pnt.pdf",
+            "keywords": [
+                "porcentaje de cofinanciamiento pnt", "financiamiento pnt", "cuanto aporta agroideas", "contrapartida pnt", "monto maximo pnt", "cuanto dinero", "contrapartida", "uit", "elegivilidad", "eligibilidad", "cofinansiamiento"
+            ],
+            "question_patterns": [
+                "¿Cuánto es el porcentaje de cofinanciamiento en Adopción de Tecnología (PNT)?",
+                "¿Cuánto debe aportar la organizacion agraria como contrapartida en PNT?",
+                "¿Cuánto dinero tengo que poner yo para tecnologia?"
+            ],
+            "answer": "<p>El porcentaje de cofinanciamiento se define según el monto del plan de negocio expresado en UIT:</p><ul class='list-disc pl-5 mt-2 space-y-1'><li><strong>Hasta 15 UIT:</strong> AGROIDEAS cofinancia hasta el 80%, y la organización aporta el 20%.</li><li><strong>De 15 a 50 UIT:</strong> AGROIDEAS cofinancia hasta el 70%, y la organización aporta el 30%.</li><li><strong>Más de 50 UIT:</strong> AGROIDEAS cofinancia hasta el 60% (con topes máximos por UIT establecidos anualmente), y la organización aporta el 40%.</li></ul>",
+            "quick_prompt": "¿Cuál es el porcentaje de cofinanciamiento del PNT?"
+        }
+    ]
+}
