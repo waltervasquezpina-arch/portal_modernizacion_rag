@@ -129,48 +129,8 @@ const contentLoader = {
         if (!this.data) await this.init();
         if (!this.data) return;
 
-        // 1. Directivas (Accordion)
-        const accordion = document.getElementById('lista-oficial-directivas');
-        if (accordion && this.data.repository.directivas) {
-            accordion.innerHTML = this.data.repository.directivas.map((cat, idx) => `
-                <div class="accordion-item ${idx === 0 ? 'active' : ''}">
-                    <button class="w-full p-6 flex justify-between items-center focus:outline-none hover:bg-slate-50 transition-all group" onclick="toggleAccordion(this)">
-                        <span class="font-bold text-slate-700">${cat.title}</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform ${idx === 0 ? 'rotate-180' : ''} chevron-icon"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="p-0 border-t border-slate-50">
-                            ${cat.subsections.map(sub => `
-                                <div class="bg-slate-50 text-xs font-black text-slate-400 uppercase tracking-widest p-4 pb-2 border-t border-slate-100">${sub.title}</div>
-                                <div class="overflow-x-auto">
-                                    <table class="w-full text-left text-sm">
-                                        <tbody class="divide-y divide-slate-50">
-                                            ${sub.items.length > 0 ? sub.items.map(item => `
-                                                <tr class="hover:bg-slate-50/50 transition-colors">
-                                                    <td class="p-4 font-bold text-slate-700 w-1/3">${item.title}</td>
-                                                    <td class="p-4 text-xs font-mono text-slate-500">${item.code}</td>
-                                                    <td class="p-4 text-xs text-slate-600">${item.date}</td>
-                                                    <td class="p-4 text-center">
-                                                        <a href="${item.url}" class="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors inline-block"><i data-lucide="file-type-2" class="w-6 h-6"></i></a>
-                                                    </td>
-                                                </tr>
-                                            `).join('') : `
-                                                <tr>
-                                                    <td class="p-4 text-slate-400 italic">No desarrollado / Sin registros</td>
-                                                    <td class="p-4 text-slate-400 font-mono text-xs">---</td>
-                                                    <td class="p-4 text-slate-400 text-xs">-/-/-</td>
-                                                    <td class="p-4 text-center">---</td>
-                                                </tr>
-                                            `}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-        }
+        // 1. Directivas ahora se cargan desde data/normativas_agroideas.json
+        //    mediante js/directivas-table.js (DataTables). Bloque heredado eliminado.
 
         // 2. Innovadora (Tablas de Innovación)
         const innovTables = this.data.repository.innovacion_tablas;
