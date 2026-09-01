@@ -153,8 +153,19 @@
                             <div class="p-6 bg-blue-50/50 text-slate-600 text-sm italic border-t border-slate-100">
                                 Repositorio centralizado que alberga todas las directivas y normas internas vigentes de la entidad. Utiliza este catálogo para consultar los marcos normativos que regulan nuestras funciones, procesos operativos y administrativos.
                             </div>
-                            <div class="p-0 border-t border-slate-50 overflow-x-auto divide-y divide-slate-100" id="lista-oficial-directivas">
-                                <!-- El contenido dinámico de las directivas (json) se cargará aquí -->
+                            <div class="p-0 border-t border-slate-50 overflow-x-auto" id="lista-oficial-directivas">
+                                <table id="tablaDirectivas" class="display responsive w-full" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Título</th>
+                                            <th>Resolución</th>
+                                            <th>Fecha Publicación</th>
+                                            <th>Descripción</th>
+                                            <th>Enlace</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -775,6 +786,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/components.js"></script>
     <script src="js/content-loader.js"></script>
+    <script src="js/directivas-table.js"></script>
     
     <script>
         // Función expuesta para que content-loader.js la llame después de inyectar datos
@@ -870,8 +882,11 @@
                             pane.classList.remove('hidden');
                             pane.classList.add('block');
                             // Ajustar columnas de DataTable si se vuelve visible
-                            if(targetId === 'publicaciones') {
+                            if(targetId === 'publicaciones' && $.fn.DataTable.isDataTable('#repoTable')) {
                                 $('#repoTable').DataTable().columns.adjust().responsive.recalc();
+                            }
+                            if(targetId === 'normatividad' && $.fn.DataTable.isDataTable('#tablaDirectivas')) {
+                                $('#tablaDirectivas').DataTable().columns.adjust().responsive.recalc();
                             }
                         }
                     });
@@ -903,6 +918,14 @@
                 item.classList.add('active');
                 const icon = item.querySelector('.chevron-icon');
                 if(icon) icon.classList.add('rotate-180');
+                
+                // Recalcular DataTables si contiene la tabla de directivas
+                setTimeout(() => {
+                    if (item.querySelector('#tablaDirectivas') && $.fn.DataTable.isDataTable('#tablaDirectivas')) {
+                        $('#tablaDirectivas').DataTable().columns.adjust().responsive.recalc();
+                    }
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                }, 150);
             }
         }
 
